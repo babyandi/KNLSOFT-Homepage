@@ -1,0 +1,29 @@
+{
+  "ledger_id": "KNLSOFT_WEBSITE_ORUDA_GATE_LEDGER_V1_0_0",
+  "project_id": "ORUDA-PROJECT-KNLSOFT-WEBSITE-001",
+  "state": "ENTRY_GATE_BLOCKED_FAIL_CLOSED",
+  "gates": [
+    {"gate":"REG-00","result":"PASS_CONTROL_CANDIDATE","evidence":["KNLSOFT_WEBSITE_PROJECT.v1.0.0.json"]},
+    {"gate":"METHOD-00","result":"PASS_CONTROL_CANDIDATE","evidence":["babyandi/ORUDA@89b1b8a83ff98b71ea971b8bc1757b677e0361c7"]},
+    {"gate":"OBP-ENTRY","result":"BLOCK","evidence":["OBUSINESSPLANNING_NOT_FOUND_IN_CURRENT_REPOSITORY_SEARCH_AND_METHOD_MATRIX"]},
+    {"gate":"DOC-INTAKE","result":"PARTIAL","evidence":["docs/13-26"]},
+    {"gate":"BUSINESS-01","result":"NOT_EXECUTED","evidence":[]},
+    {"gate":"ADMIN-RFP-02","result":"BLOCKED_BY_OBP","evidence":[]},
+    {"gate":"ASSURE-03","result":"NOT_EXECUTED","evidence":[]},
+    {"gate":"FORMAL-GO-04","result":"NOT_GRANTED","evidence":[]},
+    {"gate":"PROJECT-ACT-05","result":"BLOCKED","evidence":["OPROJECTMANAGER_BINDING_NOT_FOUND"]},
+    {"gate":"PM-BASELINE-06","result":"NOT_EXECUTED","evidence":[]},
+    {"gate":"LEADER-ROUTE-07","result":"NOT_EXECUTED","evidence":["OPROJECTLEADER_BINDING_NOT_FOUND"]},
+    {"gate":"CONTENT-DESIGN-08","result":"BLOCKED","evidence":["OVISUAL_BINDING_NOT_FOUND"]},
+    {"gate":"BUILD-09","result":"NOT_EXECUTED","evidence":[]},
+    {"gate":"TEST-10","result":"NOT_EXECUTED","evidence":[]},
+    {"gate":"VIEW-11","result":"NOT_EXECUTED","evidence":[]},
+    {"gate":"AUDIT-12","result":"NOT_EXECUTED","evidence":[]},
+    {"gate":"ASSET-13","result":"NOT_EXECUTED","evidence":[]},
+    {"gate":"RELEASE-14","result":"HOLD","evidence":[]},
+    {"gate":"PROD-15","result":"HOLD","evidence":[]}
+  ],
+  "true_hard_gate": "OBP-ENTRY",
+  "downstream_pass_allowed": false,
+  "resume_trigger": "OBUSINESSPLANNING_PROGRAM_PROFILE_CONTRACT_VALIDATOR_PASS"
+}
