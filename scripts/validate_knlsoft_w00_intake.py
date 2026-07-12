@@ -25,7 +25,9 @@ def validate_documents(d):
     require(gate.get("exit_gate")=="WG-00-INTAKE-COMPLETE","W00 exit gate invalid")
     require(gate.get("exit_result")=="HOLD","W00 exit must remain HOLD")
     require(gate.get("downstream_stage_completion_allowed") is False,"downstream completion must be false")
-    require(len(gate.get("blockers",[]))>=4,"W00 blockers incomplete")
+    remaining=set(gate.get("blockers",[]))
+    require({"OBUSINESSPLANNING_EXECUTION_PROFILE_AND_CONTRACT_NOT_BOUND","ORUDA_WEBSITE_ASSET_DOMAIN_PR23_DRAFT_UNMERGED","OFFICIAL_BRAND_PRODUCT_AND_EVIDENCE_SOURCES_MISSING"}.issubset(remaining),"required W00 blockers incomplete")
+    require("HUMAN_DECISION_OWNER_NOT_BOUND_IN_PROJECT_MANIFEST" not in remaining,"resolved authority blocker still present")
     required={"official KNLSOFT logo and brand guideline","official aTops product specification and approved AI role","official SPACEMON product specification and approved AI role","approved product screenshots or demo access","approved customer cases and measurable outcomes"}
     require(required.issubset({x.get("name") for x in s.get("missing_official_sources",[])}),"official source gaps incomplete")
     require(s.get("conflict_rule")=="HIGHER_PRIORITY_SOURCE_WINS_AND_CONFLICT_REQUIRES_DECISION_LOG","source conflict rule missing")
