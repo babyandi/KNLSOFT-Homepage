@@ -60,6 +60,81 @@
       ]
     },
     {
+      "gate": "W03-PREP",
+      "result": "PASS_CONTROL_CANDIDATE",
+      "evidence": [
+        "oruda/website/W03"
+      ]
+    },
+    {
+      "gate": "WG-03",
+      "result": "HOLD",
+      "evidence": [
+        "UPSTREAM_WG_02_NOT_GRANTED",
+        "STAGE_EVIDENCE_OR_DECISION_MISSING"
+      ]
+    },
+    {
+      "gate": "W04-PREP",
+      "result": "PASS_CONTROL_CANDIDATE",
+      "evidence": [
+        "oruda/website/W04"
+      ]
+    },
+    {
+      "gate": "WG-04",
+      "result": "HOLD",
+      "evidence": [
+        "UPSTREAM_WG_03_NOT_GRANTED",
+        "STAGE_EVIDENCE_OR_DECISION_MISSING"
+      ]
+    },
+    {
+      "gate": "W05-PREP",
+      "result": "PASS_CONTROL_CANDIDATE",
+      "evidence": [
+        "oruda/website/W05"
+      ]
+    },
+    {
+      "gate": "WG-05",
+      "result": "HOLD",
+      "evidence": [
+        "UPSTREAM_WG_04_NOT_GRANTED",
+        "STAGE_EVIDENCE_OR_DECISION_MISSING"
+      ]
+    },
+    {
+      "gate": "W06-PREP",
+      "result": "PASS_CONTROL_CANDIDATE",
+      "evidence": [
+        "oruda/website/W06"
+      ]
+    },
+    {
+      "gate": "WG-06",
+      "result": "HOLD",
+      "evidence": [
+        "UPSTREAM_WG_05_NOT_GRANTED",
+        "STAGE_EVIDENCE_OR_DECISION_MISSING"
+      ]
+    },
+    {
+      "gate": "W07-PREP",
+      "result": "PASS_CONTROL_CANDIDATE",
+      "evidence": [
+        "oruda/website/W07"
+      ]
+    },
+    {
+      "gate": "WG-07",
+      "result": "HOLD",
+      "evidence": [
+        "UPSTREAM_WG_06_NOT_GRANTED",
+        "STAGE_EVIDENCE_OR_DECISION_MISSING"
+      ]
+    },
+    {
       "gate": "REG-00",
       "result": "PASS_CONTROL_CANDIDATE",
       "evidence": [
