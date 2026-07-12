@@ -86,5 +86,14 @@
     "OAudit",
     "OAsset"
   ],
-  "actual_role_instances": []
+  "actual_role_instances": [
+    {
+      "instance_id": "ROLE-HDO-KNLSOFT-WEB-001",
+      "role": "HUMAN_DECISION_OWNER"
+    },
+    {
+      "instance_id": "ROLE-OMANAGER-KNLSOFT-WEB-001",
+      "role": "OManager"
+    }
+  ]
 }
