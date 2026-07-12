@@ -1,0 +1,84 @@
+{
+  "artifact_id": "KNLSOFT-WEBSITE-W08-INTERACTION-CONTRACT",
+  "version": "0.1.0",
+  "status": "CANDIDATE_NOT_WIREFRAME",
+  "patterns": [
+    {
+      "id": "IX-01",
+      "name": "progressive product disclosure",
+      "states": [
+        "summary",
+        "boundary",
+        "evidence",
+        "detail",
+        "handoff"
+      ],
+      "recovery": "return without losing context"
+    },
+    {
+      "id": "IX-02",
+      "name": "claim evidence inspection",
+      "states": [
+        "claim",
+        "status",
+        "source summary",
+        "source unavailable_or_expired"
+      ],
+      "recovery": "approved follow-up route"
+    },
+    {
+      "id": "IX-03",
+      "name": "inquiry form",
+      "states": [
+        "idle",
+        "editing",
+        "invalid",
+        "submitting",
+        "success",
+        "delivery_error"
+      ],
+      "recovery": "preserve safe fields and retry or alternate channel"
+    },
+    {
+      "id": "IX-04",
+      "name": "resource access",
+      "states": [
+        "available",
+        "loading",
+        "opened",
+        "missing",
+        "expired"
+      ],
+      "recovery": "show status and request current resource"
+    },
+    {
+      "id": "IX-05",
+      "name": "navigation",
+      "states": [
+        "closed",
+        "open",
+        "current",
+        "focus",
+        "escape_return"
+      ],
+      "recovery": "restore trigger focus"
+    }
+  ],
+  "responsive_contract": [
+    "320px CSS viewport reflow without two-dimensional scrolling except essential data",
+    "12-column common grid may collapse to 4-column mobile logic",
+    "meaning-unit Korean line breaks",
+    "touch targets and keyboard targets remain operable",
+    "motion is optional and reduced-motion safe"
+  ],
+  "accessibility_contract": [
+    "semantic landmarks",
+    "visible focus",
+    "logical focus order",
+    "accessible names",
+    "status announcements",
+    "errors linked to fields",
+    "color not sole signal"
+  ],
+  "wireframe_defined": false
+}
