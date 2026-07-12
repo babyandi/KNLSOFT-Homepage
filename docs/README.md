@@ -1,26 +1,43 @@
-# KNLSOFT Homepage Baseline Documents
+# KNLSOFT WebSite Baseline Documents
+
+## Active baseline
+
+The active working baseline is `v0.2 Candidate`, which treats the website as a digital service and controls work through W00–W14 and the Content & Evidence Gate.
 
 | No. | Document | Purpose | State |
 |---:|---|---|---|
-| 01 | Strategy Brief | Business, audience, positioning, conversion | PASS candidate |
-| 02 | Product & AI Claim Matrix | Public truth and claim boundaries | PARTIAL |
-| 03 | Content & Asset Inventory | Source readiness classification | PARTIAL |
-| 04 | Art Direction Brief | Visual identity and prohibitions | PASS candidate |
-| 05 | Reference Benchmark | Selective external reference rules | PASS |
-| 06 | Hero Visual Asset Plan | First-viewport production contract | READY |
-| 07 | Asset Evidence Gap Register | Missing evidence, owners, triggers | ACTIVE |
-| 08 | Information Architecture | Sitemap, journeys, migration | PASS candidate |
-| 09 | Content Model | Structured content and governance | PASS candidate |
-| 10 | Design Token Specification | Role-based design system | DRAFT |
-| 11 | Design Validation Harness | Gates, tests, failure routing | READY |
-| 12 | Execution Roadmap | Phased implementation and exit gates | READY |
+| 13 | WebSite Strategy & Evidence Blueprint | W00–W14 control and service outcomes | ACTIVE CANDIDATE |
+| 14 | User · Role · Buying Journey | roles, contexts, buying decisions | PASS CANDIDATE |
+| 15 | aTops · SPACEMON · AI Boundary | product and AI truth boundaries | PASS CANDIDATE / facts partial |
+| 16 | Claim–Data–Evidence Matrix | public truth, sources, owners, proof | PARTIAL/BLOCKED |
+| 17 | Scenario Catalog | normal, exception, recovery | PASS CANDIDATE |
+| 18 | Functional Architecture | capabilities and scope boundaries | PASS CANDIDATE |
+| 19 | IA · Navigation · Task · State | findability, flows, states | PASS CANDIDATE |
+| 20 | Page · Section Responsibility | page decisions and section contracts | PASS CANDIDATE |
+| 21 | Policy · Permission · Security | RBAC, privacy, security | PASS CANDIDATE |
+| 22 | UX · Interaction Specification | behavior, reflow, accessibility | PASS CANDIDATE |
+| 23 | Content & Evidence Gate | wireframe/design/build/publication entry | ACTIVE |
+| 24 | RCA · Decision Ledger | failure prevention and next sequence | ACTIVE |
+
+## Superseded design-first baseline
+
+Documents 01–12 remain as `v0.1 REFERENCE_BASELINE`. They preserve useful strategy, asset, benchmark, Hero, content-model, and validation material but do not authorize Visual Design or implementation.
+
+The published Sites version 8, its Hero/Visual Assets, accumulated `globals.css`, and lower-page layout are `DEPRECATED_REFERENCE`. Do not continue with CSS overrides.
 
 ## Current gate summary
-- G0 Strategy: PASS candidate
-- G1 Claims: PARTIAL
-- G2 Assets/Rights: BLOCKED
-- G3 Art Direction: PASS candidate at brief level
-- G4–G10: NOT EXECUTED
+
+- CEG-0 Intake Integrity: PARTIAL.
+- CEG-1 Strategy Integrity: PASS CANDIDATE.
+- CEG-2 Claim Integrity: PARTIAL.
+- CEG-3 Service Integrity: PASS CANDIDATE.
+- CEG-WF Wireframe Entry: NOT GRANTED.
+- CEG-VD/IM/PB: BLOCKED.
 
 ## Decision
-Do not create or publish another final visual concept until G1 and the Hero subset of G2 pass. Continue evidence recovery, content architecture, and technical planning in parallel.
+
+- Apply now: v0.2 documents, evidence recovery, claim confirmation, operational fact confirmation.
+- Do not apply now: wireframes, Visual Design, CSS edits, implementation, production deployment, main merge.
+- Defer: W09–W14.
+- Trigger: the unresolved checklist in `23_CONTENT_EVIDENCE_GATE.md`.
+
