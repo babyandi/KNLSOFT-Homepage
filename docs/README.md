@@ -18,6 +18,8 @@ The active working baseline is `v0.2 Candidate`, which treats the website as a d
 | 22 | UX · Interaction Specification | behavior, reflow, accessibility | PASS CANDIDATE |
 | 23 | Content & Evidence Gate | wireframe/design/build/publication entry | ACTIVE |
 | 24 | RCA · Decision Ledger | failure prevention and next sequence | ACTIVE |
+| 25 | Public Source · Legacy URL Inventory | evidence recovery seed and migration risks | PARTIAL |
+| 26 | Existing Content Risk Register | quarantine unverified current-site claims | ACTIVE |
 
 ## Superseded design-first baseline
 
@@ -40,4 +42,3 @@ The published Sites version 8, its Hero/Visual Assets, accumulated `globals.css`
 - Do not apply now: wireframes, Visual Design, CSS edits, implementation, production deployment, main merge.
 - Defer: W09–W14.
 - Trigger: the unresolved checklist in `23_CONTENT_EVIDENCE_GATE.md`.
-
