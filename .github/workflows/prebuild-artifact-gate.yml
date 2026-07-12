@@ -1,0 +1,23 @@
+name: KNLSOFT Pre-Build Artifact Assurance Gate
+
+on:
+  pull_request:
+    paths:
+      - "docs/33_KNLSOFT_PREBUILD_ARTIFACT_ASSURANCE_GATE.v1.0.0.json"
+      - "scripts/validate_prebuild_artifact_gate.py"
+      - ".github/workflows/prebuild-artifact-gate.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m json.tool docs/33_KNLSOFT_PREBUILD_ARTIFACT_ASSURANCE_GATE.v1.0.0.json >/dev/null
+      - run: python scripts/validate_prebuild_artifact_gate.py
