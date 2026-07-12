@@ -1,0 +1,116 @@
+{
+  "backlog_id": "KNLSOFT-WEBSITE-W00-DECISION-BACKLOG",
+  "version": "0.1.0",
+  "status": "OPEN",
+  "items": [
+    {
+      "decision_id": "D-W00-001",
+      "priority": "P0",
+      "question": "Confirm official KNLSOFT brand assets and usage rules",
+      "owner": "HUMAN_DECISION_OWNER",
+      "state": "OPEN",
+      "blocks": [
+        "W09"
+      ]
+    },
+    {
+      "decision_id": "D-W00-002",
+      "priority": "P0",
+      "question": "Approve aTops product boundary, functions and AI role",
+      "owner": "KNLSOFT_PRODUCT_OWNER",
+      "state": "OPEN",
+      "blocks": [
+        "W01",
+        "W04"
+      ]
+    },
+    {
+      "decision_id": "D-W00-003",
+      "priority": "P0",
+      "question": "Approve SPACEMON product boundary, functions and AI role",
+      "owner": "KNLSOFT_PRODUCT_OWNER",
+      "state": "OPEN",
+      "blocks": [
+        "W01",
+        "W04"
+      ]
+    },
+    {
+      "decision_id": "D-W00-004",
+      "priority": "P0",
+      "question": "Bind the Human Decision Owner and OManager for GO/HOLD",
+      "owner": "HUMAN_DECISION_OWNER",
+      "state": "OPEN",
+      "blocks": [
+        "WG-00"
+      ]
+    },
+    {
+      "decision_id": "D-W00-005",
+      "priority": "P1",
+      "question": "Prioritize primary audiences and buying-decision participants",
+      "owner": "OBusinessPlanning",
+      "state": "OPEN",
+      "blocks": [
+        "W02"
+      ]
+    },
+    {
+      "decision_id": "D-W00-006",
+      "priority": "P1",
+      "question": "Define inquiry/demo recipient, required fields, response owner and SLA",
+      "owner": "OBusinessAdmin",
+      "state": "OPEN",
+      "blocks": [
+        "W05",
+        "W07"
+      ]
+    },
+    {
+      "decision_id": "D-W00-007",
+      "priority": "P1",
+      "question": "Decide CMS/admin scope and content approval workflow",
+      "owner": "OBusinessAdmin",
+      "state": "OPEN",
+      "blocks": [
+        "W05",
+        "W07",
+        "W10"
+      ]
+    },
+    {
+      "decision_id": "D-W00-008",
+      "priority": "P1",
+      "question": "Decide Korean-only versus multilingual scope",
+      "owner": "OBusinessPlanning",
+      "state": "OPEN",
+      "blocks": [
+        "W04",
+        "W06"
+      ]
+    },
+    {
+      "decision_id": "D-W00-009",
+      "priority": "P1",
+      "question": "Approve legal, privacy, analytics, hosting and domain constraints",
+      "owner": "OBusinessAdmin",
+      "state": "OPEN",
+      "blocks": [
+        "W07",
+        "W10",
+        "W13"
+      ]
+    },
+    {
+      "decision_id": "D-W00-010",
+      "priority": "P1",
+      "question": "Approve customer-case publication rights and evidence",
+      "owner": "HUMAN_DECISION_OWNER",
+      "state": "OPEN",
+      "blocks": [
+        "W04"
+      ]
+    }
+  ],
+  "question_policy": "ASK_ONLY_WHEN_A_DECISION_BECOMES_THE_NEXT_TRUE_HARD_GATE"
+}
