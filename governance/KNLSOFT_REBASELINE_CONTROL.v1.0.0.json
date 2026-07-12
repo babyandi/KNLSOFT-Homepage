@@ -16,9 +16,11 @@
     "merge_base": "ec07725686a32cd3106446723d45ad711a2a092e",
     "ahead_by": 147,
     "behind_by": 1,
-    "changed_file_count": 92,
+    "changed_file_count": 89,
     "mergeable": false,
-    "disposition": "CONFLICT_HOLD_NO_FURTHER_WRITES"
+    "disposition": "CONFLICT_HOLD_NO_FURTHER_WRITES",
+    "metadata_changed_file_count": 92,
+    "count_reconciliation": "CURRENT_PAGINATED_LIST_89_IS_INVENTORY_AUTHORITY_METADATA_DRIFT_RCA_OPEN"
   },
   "upstream_dependencies": [
     {"ref":"babyandi/ORUDA#22","role":"ROLE_TAXONOMY","master_queue_state":"CONFLICT","required_before":"ROLE_BINDING_PROMOTION"},
@@ -42,7 +44,7 @@
     {"class":"BLOCKED_EXTERNAL_EVIDENCE","criteria":"Requires official brand product AI screen case privacy or operational evidence"}
   ],
   "artifact_work_order": [
-    "INVENTORY_92_CHANGED_FILES",
+    "INVENTORY_CURRENT_89_CHANGED_FILES",
     "MAP_EACH_FILE_TO_ARTIFACT_ID_OWNER_METHOD_AND_GATE",
     "DETECT_DUPLICATES_AND_CONFLICTS_WITH_LATEST_ORUDA_MAIN_AND_OPEN_PRS",
     "CLASSIFY_PRESERVE_REVALIDATE_SUPERSEDE_QUARANTINE_OR_BLOCKED",
