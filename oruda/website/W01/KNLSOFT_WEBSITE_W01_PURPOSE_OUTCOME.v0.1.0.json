@@ -1,0 +1,77 @@
+{
+  "artifact_id": "KNLSOFT-WEBSITE-W01-PURPOSE-OUTCOME",
+  "version": "0.1.0",
+  "stage": "W01",
+  "status": "CANDIDATE_PREPARATION_HOLD",
+  "entry_dependency": {
+    "WG-00": "HOLD",
+    "formal_W01_execution_allowed": false,
+    "candidate_preparation_allowed": true
+  },
+  "purpose_candidate": "Help enterprise decision participants understand KNLSOFT and evaluate aTops and SPACEMON through traceable information, then reach an appropriate inquiry or demo path.",
+  "business_outcome_candidates": [
+    {
+      "outcome_id": "O-W01-001",
+      "name": "COMPANY_ROLE_CLARITY",
+      "definition": "Visitors can explain what KNLSOFT is and why it is relevant.",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "outcome_id": "O-W01-002",
+      "name": "PRODUCT_BOUNDARY_CLARITY",
+      "definition": "Visitors can distinguish aTops and SPACEMON without unsupported feature assumptions.",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "outcome_id": "O-W01-003",
+      "name": "EVIDENCE_BASED_TRUST",
+      "definition": "Important claims expose their evidence status and source.",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "outcome_id": "O-W01-004",
+      "name": "BUYING_DECISION_SUPPORT",
+      "definition": "Business and technical evaluators can locate information needed for their decision stage.",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "outcome_id": "O-W01-005",
+      "name": "QUALIFIED_HANDOFF",
+      "definition": "Interested visitors can submit an inquiry or demo request with enough context for follow-up.",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "outcome_id": "O-W01-006",
+      "name": "REUSABLE_BUILDER_LEARNING",
+      "definition": "Validated website processes and assets can become ORUDA Website Builder promotion candidates.",
+      "status": "HYPOTHESIS"
+    }
+  ],
+  "non_goals_until_approved": [
+    "claim market leadership",
+    "publish invented AI capabilities",
+    "publish unsupported performance numbers",
+    "replace product documentation",
+    "provide authenticated customer support",
+    "activate CMS administration",
+    "deploy production changes"
+  ],
+  "success_definition": "Success requires user-task evidence, content/evidence integrity and qualified handoff quality; visual preference alone is insufficient.",
+  "exit_gate": {
+    "gate": "WG-01-OUTCOME-DEFINED",
+    "result": "HOLD",
+    "blockers": [
+      "WG-00_NOT_GRANTED",
+      "PRODUCT_BOUNDARIES_UNAPPROVED",
+      "PRIMARY_AUDIENCE_PRIORITY_UNAPPROVED",
+      "BUSINESS_BASELINE_AND_NUMERIC_TARGETS_MISSING"
+    ]
+  },
+  "execution_boundary": {
+    "W01_completed": false,
+    "W02_completed": false,
+    "wireframe_allowed": false,
+    "visual_design_allowed": false,
+    "implementation_allowed": false
+  }
+}
