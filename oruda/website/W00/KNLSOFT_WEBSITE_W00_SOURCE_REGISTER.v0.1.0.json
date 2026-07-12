@@ -1,0 +1,122 @@
+{
+  "register_id": "KNLSOFT-WEBSITE-W00-SOURCE-REGISTER",
+  "version": "0.1.0",
+  "sources": [
+    {
+      "source_id": "SRC-W00-001",
+      "type": "HUMAN_DIRECTION",
+      "locator": "current project conversation",
+      "status": "VERIFIED_FOR_INTENT_ONLY",
+      "may_support": [
+        "scope",
+        "priorities",
+        "process rules"
+      ],
+      "may_not_support": [
+        "product feature fact",
+        "performance claim",
+        "customer case"
+      ]
+    },
+    {
+      "source_id": "SRC-W00-002",
+      "type": "PROJECT_DOCUMENT_SET",
+      "locator": "docs/01 through docs/32",
+      "status": "INTAKE_CANDIDATE",
+      "may_support": [
+        "hypotheses",
+        "risk discovery",
+        "future validation questions"
+      ],
+      "may_not_support": [
+        "official claim",
+        "gate pass"
+      ]
+    },
+    {
+      "source_id": "SRC-W00-003",
+      "type": "CURRENT_PUBLIC_UI",
+      "locator": "current repository UI sources",
+      "status": "REFERENCE_CANDIDATE_NOT_BASELINE",
+      "may_support": [
+        "legacy inventory",
+        "migration risk"
+      ],
+      "may_not_support": [
+        "approved IA",
+        "approved UX",
+        "approved visual design"
+      ]
+    },
+    {
+      "source_id": "SRC-W00-004",
+      "type": "ORUDA_PROGRAM_ASSET",
+      "locator": "babyandi/ORUDA PR #23 @ 102b84c091e132cf965c4f47e3c0daa5d617bb2a",
+      "status": "UPSTREAM_DRAFT_CANDIDATE_PINNED",
+      "may_support": [
+        "W00-W14 structure",
+        "profile definitions",
+        "asset governance"
+      ],
+      "may_not_support": [
+        "official runtime execution",
+        "final lock"
+      ]
+    },
+    {
+      "source_id": "SRC-W00-005",
+      "type": "ORUDA_ROLE_TAXONOMY",
+      "locator": "babyandi/ORUDA PR #22 @ f72b0290c81a6bbe52cd4aed6ee2c438f1ecad86",
+      "status": "UPSTREAM_DRAFT_CANDIDATE_PINNED",
+      "may_support": [
+        "delegation",
+        "role selection",
+        "authority boundaries"
+      ],
+      "may_not_support": [
+        "actual role assignment",
+        "work execution"
+      ]
+    }
+  ],
+  "missing_official_sources": [
+    {
+      "source_id": "MISS-W00-001",
+      "name": "official KNLSOFT logo and brand guideline",
+      "severity": "BLOCKING_FOR_VISUAL"
+    },
+    {
+      "source_id": "MISS-W00-002",
+      "name": "official aTops product specification and approved AI role",
+      "severity": "BLOCKING_FOR_PRODUCT_CLAIMS"
+    },
+    {
+      "source_id": "MISS-W00-003",
+      "name": "official SPACEMON product specification and approved AI role",
+      "severity": "BLOCKING_FOR_PRODUCT_CLAIMS"
+    },
+    {
+      "source_id": "MISS-W00-004",
+      "name": "approved product screenshots or demo access",
+      "severity": "BLOCKING_FOR_PRODUCT_EVIDENCE"
+    },
+    {
+      "source_id": "MISS-W00-005",
+      "name": "approved customer cases and measurable outcomes",
+      "severity": "BLOCKING_FOR_CASE_CLAIMS"
+    },
+    {
+      "source_id": "MISS-W00-006",
+      "name": "company disclosure, privacy and inquiry handling information",
+      "severity": "BLOCKING_FOR_RELEASE"
+    }
+  ],
+  "source_priority": [
+    "OFFICIAL_APPROVED_SOURCE",
+    "VERIFIED_PRIMARY_EVIDENCE",
+    "HUMAN_APPROVED_DECISION",
+    "PROJECT_CANDIDATE",
+    "LEGACY_REFERENCE"
+  ],
+  "conflict_rule": "HIGHER_PRIORITY_SOURCE_WINS_AND_CONFLICT_REQUIRES_DECISION_LOG"
+}
