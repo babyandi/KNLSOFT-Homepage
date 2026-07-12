@@ -1,0 +1,167 @@
+{
+  "artifact_id": "KNLSOFT-WEBSITE-W02-USER-ROLE-CONTEXT",
+  "version": "0.1.0",
+  "stage": "W02",
+  "status": "CANDIDATE_PREPARATION_HOLD",
+  "entry_dependency": {
+    "WG-01": "HOLD",
+    "formal_W02_execution_allowed": false,
+    "candidate_preparation_allowed": true
+  },
+  "user_groups": [
+    {
+      "user_id": "U-W02-001",
+      "name": "Economic or business sponsor",
+      "priority": "PRIMARY_CANDIDATE",
+      "needs": [
+        "business relevance",
+        "risk and expected value",
+        "credible evidence",
+        "next-step clarity"
+      ],
+      "evidence_status": "ROLE_HYPOTHESIS"
+    },
+    {
+      "user_id": "U-W02-002",
+      "name": "Enterprise IT and architecture evaluator",
+      "priority": "PRIMARY_CANDIDATE",
+      "needs": [
+        "product boundary",
+        "architecture and integration",
+        "security and operation constraints",
+        "technical evidence"
+      ],
+      "evidence_status": "ROLE_HYPOTHESIS"
+    },
+    {
+      "user_id": "U-W02-003",
+      "name": "Product-domain practitioner",
+      "priority": "PRIMARY_CANDIDATE",
+      "needs": [
+        "problem fit",
+        "workflow impact",
+        "operational usability",
+        "demo or detailed material"
+      ],
+      "evidence_status": "PRODUCT_SPEC_REQUIRED"
+    },
+    {
+      "user_id": "U-W02-004",
+      "name": "Security, compliance and procurement reviewer",
+      "priority": "SECONDARY_CANDIDATE",
+      "needs": [
+        "data and AI handling",
+        "policy and permission",
+        "supplier information",
+        "contract and support boundary"
+      ],
+      "evidence_status": "ROLE_HYPOTHESIS"
+    },
+    {
+      "user_id": "U-W02-005",
+      "name": "Existing customer or support seeker",
+      "priority": "SECONDARY_CANDIDATE",
+      "needs": [
+        "support route",
+        "product updates",
+        "contact ownership"
+      ],
+      "evidence_status": "SERVICE_SCOPE_REQUIRED"
+    },
+    {
+      "user_id": "U-W02-006",
+      "name": "Partner or reseller",
+      "priority": "DEFERRED_CANDIDATE",
+      "needs": [
+        "partner boundary",
+        "sales enablement",
+        "official assets"
+      ],
+      "evidence_status": "BUSINESS_DECISION_REQUIRED"
+    },
+    {
+      "user_id": "U-W02-007",
+      "name": "Applicant or general visitor",
+      "priority": "DEFERRED_CANDIDATE",
+      "needs": [
+        "company credibility",
+        "career or general contact"
+      ],
+      "evidence_status": "SCOPE_DECISION_REQUIRED"
+    }
+  ],
+  "contexts": [
+    {
+      "context_id": "CTX-W02-001",
+      "name": "first awareness visit",
+      "constraints": [
+        "low prior knowledge",
+        "five-second orientation need",
+        "mobile possible"
+      ]
+    },
+    {
+      "context_id": "CTX-W02-002",
+      "name": "solution shortlist comparison",
+      "constraints": [
+        "cross-product comparison",
+        "claim verification",
+        "limited evaluation time"
+      ]
+    },
+    {
+      "context_id": "CTX-W02-003",
+      "name": "technical due diligence",
+      "constraints": [
+        "deep information need",
+        "security and integration questions",
+        "download or demo need"
+      ]
+    },
+    {
+      "context_id": "CTX-W02-004",
+      "name": "internal approval preparation",
+      "constraints": [
+        "shareable evidence",
+        "decision-role specific summary",
+        "traceable sources"
+      ]
+    },
+    {
+      "context_id": "CTX-W02-005",
+      "name": "inquiry or demo submission",
+      "constraints": [
+        "privacy consent",
+        "error recovery",
+        "handoff ownership",
+        "confirmation state"
+      ]
+    },
+    {
+      "context_id": "CTX-W02-006",
+      "name": "existing customer support route",
+      "constraints": [
+        "public site must not expose restricted support data",
+        "clear routing without false SLA"
+      ]
+    }
+  ],
+  "access_constraints": [
+    "keyboard and assistive technology",
+    "WCAG 2.2 reflow",
+    "small screens",
+    "Korean meaning-unit typography",
+    "slow or unstable network",
+    "no reliance on motion alone"
+  ],
+  "exit_gate": {
+    "gate": "WG-02-USERS-DEFINED",
+    "result": "HOLD",
+    "blockers": [
+      "WG-01_NOT_GRANTED",
+      "PRIMARY_USER_PRIORITY_NOT_APPROVED",
+      "PRODUCT_SPECIFIC_USER_RESEARCH_MISSING",
+      "SUPPORT_AND_PARTNER_SCOPE_UNDECIDED"
+    ]
+  }
+}
