@@ -19,7 +19,8 @@ def validate_documents(d):
  q(d["w07"].get("execution_boundary",{}).get("form_backend") is False,"backend falsely activated")
  s=d["binding"].get("stage_adoption",{})
  for i in range(1,8):q(s.get(f"W{i:02d}")=="CANDIDATE_PREPARATION_HOLD",f"W{i:02d} candidate state invalid")
- for i in range(8,15):q(s.get(f"W{i:02d}")=="NOT_ASSESSED",f"W{i:02d} must remain not assessed")
+ q(s.get("W08")=="ENTRY_PREPARATION_HOLD","W08 entry state invalid")
+ for i in range(9,15):q(s.get(f"W{i:02d}")=="NOT_ASSESSED",f"W{i:02d} must remain not assessed")
  return e
 def main():
  e=validate_documents(load_all())
