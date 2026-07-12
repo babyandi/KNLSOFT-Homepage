@@ -1,0 +1,99 @@
+{
+  "version": "0.1.0",
+  "status": "CANDIDATE_PREPARATION_HOLD",
+  "artifact_id": "KNLSOFT-WEBSITE-W03-JOB-JOURNEY-SCENARIO",
+  "stage": "W03",
+  "entry_dependency": {
+    "WG_02": "HOLD",
+    "formal_execution": false
+  },
+  "jobs": [
+    {
+      "id": "J03-01",
+      "actor": "business sponsor",
+      "job": "understand business relevance and credible value",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "id": "J03-02",
+      "actor": "technical evaluator",
+      "job": "understand boundaries, integration, security and operation",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "id": "J03-03",
+      "actor": "domain practitioner",
+      "job": "judge problem fit and request an appropriate demonstration",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "id": "J03-04",
+      "actor": "reviewer or approver",
+      "job": "verify evidence and share decision material",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "id": "J03-05",
+      "actor": "customer",
+      "job": "find an accountable support route",
+      "status": "HYPOTHESIS"
+    }
+  ],
+  "journey": [
+    "ORIENT",
+    "IDENTIFY_NEED",
+    "SELECT_PRODUCT_CANDIDATE",
+    "REVIEW_EVIDENCE",
+    "VALIDATE_FIT",
+    "ALIGN_STAKEHOLDERS",
+    "REQUEST_HANDOFF",
+    "RECEIVE_CONFIRMATION"
+  ],
+  "scenarios": [
+    {
+      "id": "S03-N01",
+      "class": "NORMAL",
+      "trigger": "visitor identifies a relevant need",
+      "result": "qualified path to evidence and handoff"
+    },
+    {
+      "id": "S03-E01",
+      "class": "EXCEPTION",
+      "trigger": "product fit is unclear",
+      "result": "neutral comparison and general inquiry path"
+    },
+    {
+      "id": "S03-E02",
+      "class": "EXCEPTION",
+      "trigger": "claim lacks evidence",
+      "result": "claim suppressed or marked concept"
+    },
+    {
+      "id": "S03-E03",
+      "class": "EXCEPTION",
+      "trigger": "form validation or network fails",
+      "result": "preserve safe input and offer recovery"
+    },
+    {
+      "id": "S03-R01",
+      "class": "RECOVERY",
+      "trigger": "missing evidence becomes available",
+      "result": "revalidate and republish through approval"
+    },
+    {
+      "id": "S03-R02",
+      "class": "RECOVERY",
+      "trigger": "visitor chooses wrong product",
+      "result": "retain context and reroute without restart"
+    }
+  ],
+  "exit_gate": {
+    "gate": "WG-03-SCENARIOS-COVERED",
+    "result": "HOLD",
+    "blockers": [
+      "WG-02_NOT_GRANTED",
+      "USER_RESEARCH_MISSING",
+      "PRODUCT_BOUNDARY_UNAPPROVED"
+    ]
+  }
+}
