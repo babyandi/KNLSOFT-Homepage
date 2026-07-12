@@ -1,0 +1,32 @@
+name: KNLSOFT ORUDA Native Project Control
+
+on:
+  pull_request:
+    paths:
+      - "oruda/project/**"
+      - "scripts/validate_knlsoft_oruda_project.py"
+      - "scripts/test_knlsoft_oruda_project_mutations.py"
+      - ".github/workflows/knlsoft-oruda-project.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Parse ORUDA project JSON
+        run: |
+          python -m json.tool oruda/project/KNLSOFT_WEBSITE_PROJECT.v1.0.0.json >/dev/null
+          python -m json.tool oruda/project/KNLSOFT_WEBSITE_ARTIFACT_MAP.v1.0.0.json >/dev/null
+          python -m json.tool oruda/project/KNLSOFT_WEBSITE_GATE_LEDGER.v1.0.0.json >/dev/null
+      - name: Validate ORUDA project control
+        run: python scripts/validate_knlsoft_oruda_project.py
+      - name: Run fail-open mutation harness
+        run: python scripts/test_knlsoft_oruda_project_mutations.py
+
