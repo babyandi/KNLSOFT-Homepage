@@ -1,0 +1,91 @@
+{
+  "version": "0.1.0",
+  "status": "CANDIDATE_PREPARATION_HOLD",
+  "artifact_id": "KNLSOFT-WEBSITE-W05-FUNCTIONAL-ARCHITECTURE",
+  "stage": "W05",
+  "entry_dependency": {
+    "WG_04": "HOLD",
+    "formal_execution": false
+  },
+  "capabilities": [
+    {
+      "id": "CAP-01",
+      "name": "company and product content delivery",
+      "state": "CANDIDATE"
+    },
+    {
+      "id": "CAP-02",
+      "name": "role and problem-led product discovery",
+      "state": "CANDIDATE"
+    },
+    {
+      "id": "CAP-03",
+      "name": "claim status and evidence presentation",
+      "state": "CANDIDATE"
+    },
+    {
+      "id": "CAP-04",
+      "name": "product comparison without unsupported inference",
+      "state": "CANDIDATE"
+    },
+    {
+      "id": "CAP-05",
+      "name": "resource discovery",
+      "state": "CANDIDATE"
+    },
+    {
+      "id": "CAP-06",
+      "name": "inquiry and demo intake",
+      "state": "CANDIDATE"
+    },
+    {
+      "id": "CAP-07",
+      "name": "confirmation error and recovery",
+      "state": "CANDIDATE"
+    },
+    {
+      "id": "CAP-08",
+      "name": "accessible responsive delivery",
+      "state": "REQUIRED"
+    },
+    {
+      "id": "CAP-09",
+      "name": "CMS content governance",
+      "state": "DEFERRED_SCOPE_DECISION"
+    },
+    {
+      "id": "CAP-10",
+      "name": "analytics and measurement",
+      "state": "DEFERRED_PRIVACY_DECISION"
+    }
+  ],
+  "boundaries": {
+    "public_frontend": [
+      "read approved content",
+      "submit approved inquiry fields"
+    ],
+    "admin_candidate": [
+      "draft content",
+      "review evidence",
+      "approve publication"
+    ],
+    "external": [
+      "mail_or_CRM_handoff",
+      "analytics",
+      "hosting"
+    ],
+    "forbidden": [
+      "invent product facts",
+      "expose restricted support data",
+      "directly activate OBuilder"
+    ]
+  },
+  "exit_gate": {
+    "gate": "WG-05-FUNCTIONS-DEFINED",
+    "result": "HOLD",
+    "blockers": [
+      "WG-04_NOT_GRANTED",
+      "CMS_AND_INQUIRY_INTEGRATION_UNDECIDED"
+    ]
+  }
+}
