@@ -1,0 +1,175 @@
+{
+  "register_id": "KNLSOFT_ARTIFACT_FINDING_REGISTER_V1_0_0",
+  "state": "OPEN_REWORK_REQUIRED",
+  "source_assessment_sha": "53b6032c170a65d04b75a0a0114514b49dd024c9",
+  "finding_count": 13,
+  "severity_counts": {
+    "MAJOR": 13
+  },
+  "closure_rule": "FINDING_FIXED_EVIDENCE_ATTACHED_OTESTER_RETEST_OVIEW_INDEPENDENT_REVIEW",
+  "omanager_decision": "HOLD",
+  "protected_boundaries": {
+    "artifact_port": false,
+    "visual_design": false,
+    "implementation": false,
+    "obuilder_activation": false
+  },
+  "findings": [
+    {
+      "finding_id": "KNL-AF-001",
+      "artifact_id": "KNL-LEGACY-038",
+      "source_path": "docs/32_ORUDA_WEBSITE_PROGRAM_ASSET_INHERITANCE.md",
+      "code": "OWNER_OR_APPROVAL_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OBusinessAdmin",
+      "required_action": "DEFINE_AUTHOR_REVIEWER_APPROVER_AND_DECISION_AUTHORITY",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    },
+    {
+      "finding_id": "KNL-AF-002",
+      "artifact_id": "KNL-LEGACY-039",
+      "source_path": "docs/33_KNLSOFT_PREBUILD_ARTIFACT_ASSURANCE_GATE.v1.0.0.json",
+      "code": "OWNER_OR_APPROVAL_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OBusinessAdmin",
+      "required_action": "DEFINE_AUTHOR_REVIEWER_APPROVER_AND_DECISION_AUTHORITY",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    },
+    {
+      "finding_id": "KNL-AF-003",
+      "artifact_id": "KNL-LEGACY-041",
+      "source_path": "docs/34_W01_W02_KNLSOFT_CANDIDATE_PREPARATION.md",
+      "code": "OWNER_OR_APPROVAL_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OBusinessAdmin",
+      "required_action": "DEFINE_AUTHOR_REVIEWER_APPROVER_AND_DECISION_AUTHORITY",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    },
+    {
+      "finding_id": "KNL-AF-004",
+      "artifact_id": "KNL-LEGACY-042",
+      "source_path": "docs/35_W03_W07_KNLSOFT_CANDIDATE_PREPARATION.md",
+      "code": "OWNER_OR_APPROVAL_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OBusinessAdmin",
+      "required_action": "DEFINE_AUTHOR_REVIEWER_APPROVER_AND_DECISION_AUTHORITY",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    },
+    {
+      "finding_id": "KNL-AF-005",
+      "artifact_id": "KNL-LEGACY-053",
+      "source_path": "oruda/website/W00/KNLSOFT_WEBSITE_W00_INTAKE.v0.1.0.json",
+      "code": "OWNER_OR_APPROVAL_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OBusinessAdmin",
+      "required_action": "DEFINE_AUTHOR_REVIEWER_APPROVER_AND_DECISION_AUTHORITY",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    },
+    {
+      "finding_id": "KNL-AF-006",
+      "artifact_id": "KNL-LEGACY-056",
+      "source_path": "oruda/website/W00/KNLSOFT_WEBSITE_W00_SOURCE_REGISTER.v0.1.0.json",
+      "code": "OWNER_OR_APPROVAL_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OBusinessAdmin",
+      "required_action": "DEFINE_AUTHOR_REVIEWER_APPROVER_AND_DECISION_AUTHORITY",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    },
+    {
+      "finding_id": "KNL-AF-007",
+      "artifact_id": "KNL-LEGACY-057",
+      "source_path": "oruda/website/W01/KNLSOFT_WEBSITE_W01_MEASURE_REGISTRY.v0.1.0.json",
+      "code": "OWNER_OR_APPROVAL_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OBusinessAdmin",
+      "required_action": "DEFINE_AUTHOR_REVIEWER_APPROVER_AND_DECISION_AUTHORITY",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    },
+    {
+      "finding_id": "KNL-AF-008",
+      "artifact_id": "KNL-LEGACY-058",
+      "source_path": "oruda/website/W01/KNLSOFT_WEBSITE_W01_PURPOSE_OUTCOME.v0.1.0.json",
+      "code": "OWNER_OR_APPROVAL_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OBusinessAdmin",
+      "required_action": "DEFINE_AUTHOR_REVIEWER_APPROVER_AND_DECISION_AUTHORITY",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    },
+    {
+      "finding_id": "KNL-AF-009",
+      "artifact_id": "KNL-LEGACY-061",
+      "source_path": "oruda/website/W03/KNLSOFT_WEBSITE_W03_JOB_JOURNEY_SCENARIO.v0.1.0.json",
+      "code": "OWNER_OR_APPROVAL_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OBusinessAdmin",
+      "required_action": "DEFINE_AUTHOR_REVIEWER_APPROVER_AND_DECISION_AUTHORITY",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    },
+    {
+      "finding_id": "KNL-AF-010",
+      "artifact_id": "KNL-LEGACY-063",
+      "source_path": "oruda/website/W05/KNLSOFT_WEBSITE_W05_FUNCTIONAL_ARCHITECTURE.v0.1.0.json",
+      "code": "OWNER_OR_APPROVAL_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OBusinessAdmin",
+      "required_action": "DEFINE_AUTHOR_REVIEWER_APPROVER_AND_DECISION_AUTHORITY",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    },
+    {
+      "finding_id": "KNL-AF-011",
+      "artifact_id": "KNL-LEGACY-066",
+      "source_path": "oruda/website/W08/KNLSOFT_WEBSITE_W08_DISCOVERED_SOURCE_CANDIDATES.v0.1.0.json",
+      "code": "GATE_OR_EVIDENCE_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OProjectLeader",
+      "required_action": "LINK_GATE_EVIDENCE_ACCEPTANCE_ORACLE_AND_FAILURE_PATH",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    },
+    {
+      "finding_id": "KNL-AF-012",
+      "artifact_id": "KNL-LEGACY-068",
+      "source_path": "oruda/website/W08/KNLSOFT_WEBSITE_W08_INTERACTION_CONTRACT.v0.1.0.json",
+      "code": "OWNER_OR_APPROVAL_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OBusinessAdmin",
+      "required_action": "DEFINE_AUTHOR_REVIEWER_APPROVER_AND_DECISION_AUTHORITY",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    },
+    {
+      "finding_id": "KNL-AF-013",
+      "artifact_id": "KNL-LEGACY-069",
+      "source_path": "oruda/website/W08/KNLSOFT_WEBSITE_W08_OFFICIAL_SOURCE_REQUEST.v0.1.0.json",
+      "code": "GATE_OR_EVIDENCE_NOT_EXPLICIT",
+      "severity": "MAJOR",
+      "state": "OPEN",
+      "owner": "OProjectLeader",
+      "required_action": "LINK_GATE_EVIDENCE_ACCEPTANCE_ORACLE_AND_FAILURE_PATH",
+      "revalidation": "OTester_THEN_OView",
+      "port_authorized": false
+    }
+  ]
+}
