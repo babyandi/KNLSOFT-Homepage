@@ -1,0 +1,90 @@
+{
+  "boundary_id": "KNLSOFT-WEBSITE-W00-ROLE-AUTHORITY",
+  "version": "0.1.0",
+  "delegation_spine": [
+    "OBusinessPlanning",
+    "OBusinessAdmin",
+    "OManager",
+    "OProjectManager",
+    "OProjectLeader",
+    "OBuilder"
+  ],
+  "W00_authority": [
+    {
+      "role": "HUMAN_DECISION_OWNER",
+      "may": [
+        "provide authoritative decisions",
+        "approve official sources",
+        "grant or deny W00 exit"
+      ],
+      "may_not": [
+        "declare unverified evidence official"
+      ]
+    },
+    {
+      "role": "OBusinessPlanning",
+      "may": [
+        "own intake interpretation",
+        "define purpose and outcome candidates",
+        "maintain decision backlog"
+      ],
+      "may_not": [
+        "bypass missing official sources",
+        "directly assign OBuilder"
+      ]
+    },
+    {
+      "role": "OBusinessAdmin",
+      "may": [
+        "prepare administrative, inquiry, CMS and policy inputs"
+      ],
+      "may_not": [
+        "act as project manager",
+        "directly assign OBuilder"
+      ]
+    },
+    {
+      "role": "OManager",
+      "may": [
+        "issue GO or HOLD",
+        "approve project handoff"
+      ],
+      "may_not": [
+        "act as OProjectManager",
+        "create final test or audit pass"
+      ]
+    },
+    {
+      "role": "OProjectManager",
+      "activation": "NOT_ALLOWED_BEFORE_W00_EXIT",
+      "may": [],
+      "may_not": [
+        "start execution baseline"
+      ]
+    },
+    {
+      "role": "OProjectLeader",
+      "activation": "NOT_ALLOWED_BEFORE_PROJECT_BASELINE",
+      "may": [],
+      "may_not": [
+        "issue build request"
+      ]
+    },
+    {
+      "role": "OBuilder",
+      "activation": "NOT_ALLOWED_BEFORE_APPROVED_BUILD_REQUEST",
+      "may": [],
+      "may_not": [
+        "accept direct business request",
+        "self-approve"
+      ]
+    }
+  ],
+  "independent_assurance": [
+    "OTester",
+    "OView",
+    "OAudit",
+    "OAsset"
+  ],
+  "actual_role_instances": []
+}
