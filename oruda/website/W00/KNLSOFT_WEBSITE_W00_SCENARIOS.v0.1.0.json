@@ -1,0 +1,96 @@
+{
+  "scenario_register_id": "KNLSOFT-WEBSITE-W00-SCENARIOS",
+  "version": "0.1.0",
+  "scenarios": [
+    {
+      "scenario_id": "SC-W00-N-001",
+      "class": "NORMAL",
+      "trigger": "required sources and owners are supplied",
+      "flow": [
+        "register source provenance",
+        "classify content status",
+        "bind owner",
+        "evaluate WG-00",
+        "handoff to OBusinessPlanning"
+      ],
+      "expected_state": "WG_00_READY_FOR_DECISION"
+    },
+    {
+      "scenario_id": "SC-W00-E-001",
+      "class": "EXCEPTION",
+      "trigger": "official source is missing",
+      "flow": [
+        "mark claim unavailable",
+        "place dependent stage on HOLD",
+        "add source request to backlog"
+      ],
+      "forbidden": [
+        "invent claim",
+        "use concept as fact",
+        "start visual design"
+      ],
+      "expected_state": "HOLD_MISSING_SOURCE"
+    },
+    {
+      "scenario_id": "SC-W00-E-002",
+      "class": "EXCEPTION",
+      "trigger": "two sources conflict",
+      "flow": [
+        "apply source priority",
+        "record conflict",
+        "request human decision if unresolved"
+      ],
+      "expected_state": "HOLD_SOURCE_CONFLICT"
+    },
+    {
+      "scenario_id": "SC-W00-E-003",
+      "class": "EXCEPTION",
+      "trigger": "AI capability is requested without runtime evidence",
+      "flow": [
+        "classify as CONCEPT",
+        "suppress active external claim",
+        "create evidence requirement"
+      ],
+      "expected_state": "HOLD_AI_CLAIM"
+    },
+    {
+      "scenario_id": "SC-W00-E-004",
+      "class": "EXCEPTION",
+      "trigger": "design or implementation is requested before gate",
+      "flow": [
+        "reject downstream completion",
+        "preserve request as candidate",
+        "return to missing W00 input"
+      ],
+      "expected_state": "HOLD_GATE_BYPASS"
+    },
+    {
+      "scenario_id": "SC-W00-R-001",
+      "class": "RECOVERY",
+      "trigger": "missing official source is later supplied",
+      "flow": [
+        "verify provenance and authority",
+        "replace candidate reference",
+        "re-evaluate affected decisions and gates",
+        "record change impact"
+      ],
+      "expected_state": "REASSESS_WG_00"
+    },
+    {
+      "scenario_id": "SC-W00-R-002",
+      "class": "RECOVERY",
+      "trigger": "upstream ORUDA asset version changes",
+      "flow": [
+        "run compatibility check",
+        "update pinned commit by approved change",
+        "rerun inheritance and W00 validators"
+      ],
+      "expected_state": "REVALIDATED_OR_HOLD"
+    }
+  ],
+  "coverage_required": [
+    "NORMAL",
+    "EXCEPTION",
+    "RECOVERY"
+  ]
+}
