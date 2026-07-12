@@ -22,7 +22,9 @@ def validate_binding(binding):
     stages=binding.get("stage_adoption",{})
     require(list(stages.keys())==expected,"W00-W14 adoption ledger required")
     require(stages.get("W00")=="PREPARATION_IN_PROGRESS_HOLD","W00 must remain preparation HOLD")
-    require(all(stages.get(f"W{i:02d}")=="NOT_ASSESSED" for i in range(1,15)),"W01-W14 must remain not assessed")
+    require(stages.get("W01")=="CANDIDATE_PREPARATION_HOLD","W01 candidate state invalid")
+    require(stages.get("W02")=="CANDIDATE_PREPARATION_HOLD","W02 candidate state invalid")
+    require(all(stages.get(f"W{i:02d}")=="NOT_ASSESSED" for i in range(3,15)),"W03-W14 must remain not assessed")
     require(binding.get("prior_documents")=="ORUDA_INTAKE_INPUT_CANDIDATE","prior documents cannot be treated as stage PASS")
     boundary=binding.get("execution_boundary",{})
     for flag in ["website_rebuilt","runtime_execution","actual_test_execution","production_go","commercial_go","final_lock"]:
