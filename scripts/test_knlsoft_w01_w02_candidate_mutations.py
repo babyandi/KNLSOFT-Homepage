@@ -13,7 +13,7 @@ cases=[
  ("verify_user_without_research",lambda d:d["users"]["user_groups"][0].__setitem__("evidence_status","VERIFIED")),
  ("remove_buyer_role",lambda d:d["buying"]["decision_roles"].pop()),
  ("remove_recovery",lambda d:d["buying"].__setitem__("exceptions",[])),
- ("start_W03",lambda d:d["binding"]["stage_adoption"].__setitem__("W03","CANDIDATE_PREPARATION_HOLD")),
+ ("start_W08",lambda d:d["binding"]["stage_adoption"].__setitem__("W08","CANDIDATE_PREPARATION_HOLD")),
  ("allow_wireframe",lambda d:d["purpose"]["execution_boundary"].__setitem__("wireframe_allowed",True))]
 for n,f in cases:
  d=copy.deepcopy(base);f(d);e=v.validate_documents(d)
