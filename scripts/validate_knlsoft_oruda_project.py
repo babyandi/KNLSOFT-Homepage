@@ -44,8 +44,11 @@ def validate_documents(
     entry = project.get("entry_program", {})
     if entry.get("program_name") != "OBusinessPlanning":
         errors.append("ENTRY_PROGRAM_INVALID")
-    if entry.get("repository_binding_state") != "NOT_FOUND":
-        errors.append("UNVERIFIED_ENTRY_PROGRAM_PROMOTED")
+    if entry.get("repository_binding_state") != "CANDIDATE_IN_ORUDA_PR_25_NOT_MAIN":
+        errors.append("ENTRY_ROLE_BINDING_STATE_INVALID")
+    candidate = entry.get("candidate_binding", {})
+    if candidate.get("commit_sha") != "ef87184b21b48f0fd994c9f99b63a6422dff8fca" or candidate.get("ci") != "SUCCESS":
+        errors.append("ENTRY_ROLE_BINDING_EVIDENCE_INVALID")
     if entry.get("decision") != "BLOCK" or entry.get("bypass_allowed") is not False:
         errors.append("ENTRY_GATE_FAIL_OPEN")
 
