@@ -54,7 +54,10 @@ def main() -> int:
             "artifact", lambda x: x["required_assurance_chain"].remove("OView"), "ASSURANCE_CHAIN_INVALID"
         ),
         "obp_gate_opened": case(
-            "ledger", lambda x: x["gates"][2].update(result="PASS"), "OBP_GATE_LEDGER_FAIL_OPEN"
+            "ledger", lambda x: next(g for g in x["gates"] if g["gate"] == "OBP-ENTRY").update(result="PASS"), "OBP_GATE_LEDGER_FAIL_OPEN"
+        ),
+        "w00_gate_opened": case(
+            "ledger", lambda x: next(g for g in x["gates"] if g["gate"] == "WG-00").update(result="PASS"), "W00_GATE_LEDGER_FAIL_OPEN"
         ),
         "direct_builder_request": case(
             "artifact",
