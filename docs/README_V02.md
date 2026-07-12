@@ -16,6 +16,8 @@
 | 22 | UX · Interaction Specification | W08 | PASS CANDIDATE |
 | 23 | Content & Evidence Gate | W04/W12 control | ACTIVE |
 | 24 | RCA · Decision Ledger | Cross-stage control | ACTIVE |
+| 25 | Public Source · Legacy URL Inventory | W00/W04 | PARTIAL |
+| 26 | Existing Content Risk Register | W04/W12 | ACTIVE |
 
 ## 현행 판정
 
@@ -32,4 +34,3 @@
 - Do not apply now: Wireframe, Visual Design, CSS 추가 수정, 구현, 공개 배포, main 병합.
 - Defer: W09~W14.
 - Trigger: `23_CONTENT_EVIDENCE_GATE.md`의 Gate 조건.
-
