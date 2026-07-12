@@ -20,8 +20,7 @@
       "evidence": [
         "OBUSINESSPLANNING_EXECUTION_PROFILE_AND_CONTRACT_NOT_BOUND",
         "ORUDA_WEBSITE_ASSET_DOMAIN_PR23_DRAFT_UNMERGED",
-        "OFFICIAL_SOURCES_MISSING",
-        "HUMAN_DECISION_OWNER_AND_OMANAGER_INSTANCES_NOT_BOUND"
+        "OFFICIAL_SOURCES_MISSING"
       ]
     },
     {
@@ -132,6 +131,21 @@
       "evidence": [
         "UPSTREAM_WG_06_NOT_GRANTED",
         "STAGE_EVIDENCE_OR_DECISION_MISSING"
+      ]
+    },
+    {
+      "gate": "W08-ENTRY-PREP",
+      "result": "PASS_CONTROL_CANDIDATE",
+      "evidence": [
+        "oruda/website/W08"
+      ]
+    },
+    {
+      "gate": "WG-08",
+      "result": "HOLD",
+      "evidence": [
+        "WG-00_THROUGH_WG-07_NOT_GRANTED",
+        "OFFICIAL_PRODUCT_AND_BRAND_EVIDENCE_MISSING"
       ]
     },
     {
