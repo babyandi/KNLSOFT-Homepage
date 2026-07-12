@@ -12,6 +12,9 @@ on:
       - "oruda/website/W05/**"
       - "oruda/website/W06/**"
       - "oruda/website/W07/**"
+      - "oruda/website/W08/**"
+      - "scripts/validate_knlsoft_w08_entry.py"
+      - "scripts/test_knlsoft_w08_entry_mutations.py"
       - "scripts/validate_knlsoft_w00_intake.py"
       - "scripts/test_knlsoft_w00_intake_mutations.py"
       - "scripts/validate_knlsoft_w01_w02_candidates.py"
@@ -46,7 +49,7 @@ jobs:
           python -m json.tool oruda/project/KNLSOFT_WEBSITE_GATE_LEDGER.v1.0.0.json >/dev/null
           python -m json.tool oruda/inheritance/KNLSOFT_HOMEPAGE_OBUILDER_ROLE_BINDING.v1.0.0.json >/dev/null
           python -m json.tool oruda/inheritance/KNLSOFT_HOMEPAGE_WEBSITE_ASSET_BINDING.v0.1.0.json >/dev/null
-          for f in oruda/website/W0{0..7}/*.json; do python -m json.tool "$f" >/dev/null; done
+          for f in oruda/website/W0{0..8}/*.json; do python -m json.tool "$f" >/dev/null; done
       - name: Validate ORUDA project control
         run: python scripts/validate_knlsoft_oruda_project.py
       - name: Run fail-open mutation harness
@@ -71,4 +74,8 @@ jobs:
         run: python scripts/validate_knlsoft_w03_w07_candidates.py
       - name: Run W03 W07 mutation harness
         run: python scripts/test_knlsoft_w03_w07_candidate_mutations.py
+      - name: Validate W08 entry preparation
+        run: python scripts/validate_knlsoft_w08_entry.py
+      - name: Run W08 mutation harness
+        run: python scripts/test_knlsoft_w08_entry_mutations.py
 
