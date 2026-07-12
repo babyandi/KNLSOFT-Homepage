@@ -1,0 +1,99 @@
+{
+  "project_id": "ORUDA-PROJECT-KNLSOFT-WEBSITE-001",
+  "project_name": "KNLSOFT WebSite",
+  "project_type": "DIGITAL_SERVICE_WEBSITE",
+  "state": "ORUDA_NATIVE_INTAKE_REGISTERED_ENTRY_GATE_BLOCKED",
+  "registered_at": "2026-07-12",
+  "oruda_baseline": {
+    "repository": "babyandi/ORUDA",
+    "branch": "main",
+    "commit_sha": "89b1b8a83ff98b71ea971b8bc1757b677e0361c7",
+    "methodology_matrix": "registry/methodology/ORUDA_PROGRAM_METHOD_PROFILE_MATRIX.v1.0.0.json",
+    "methodology_policy": "governance/methodology/ORUDA_METHOD_TAILORING_POLICY.v1.0.0.json",
+    "state": "PROGRAM_METHOD_PROFILES_BOUND_CONTROL_CANDIDATE"
+  },
+  "entry_program": {
+    "program_name": "OBusinessPlanning",
+    "required": true,
+    "repository_binding_state": "NOT_FOUND",
+    "gate": "OBP-ENTRY",
+    "decision": "BLOCK",
+    "bypass_allowed": false
+  },
+  "missing_dependencies": [
+    {"name": "OBusinessPlanning", "type": "PROGRAM", "severity": "TRUE_HARD_GATE"},
+    {"name": "OBusinessAdmin", "type": "PROGRAM", "severity": "DEPENDENCY_BLOCK"},
+    {"name": "ORFP", "type": "PROGRAM", "severity": "DEPENDENCY_BLOCK"},
+    {"name": "OAcceptance", "type": "PROGRAM_OR_ROLE", "severity": "ASSURANCE_DEPENDENCY_BLOCK"},
+    {"name": "OProjectManager", "type": "PROGRAM_OR_ROLE", "severity": "EXECUTION_ROLE_BLOCK"},
+    {"name": "OProjectLeader", "type": "PROGRAM_OR_ROLE", "severity": "EXECUTION_ROLE_BLOCK"},
+    {"name": "OVisual", "type": "PROGRAM_OR_COMPONENT", "severity": "DESIGN_DEPENDENCY_BLOCK"}
+  ],
+  "delegation_spine": [
+    "OBusinessPlanning",
+    "OBusinessAdmin",
+    "FORMAL_GO_HOLD",
+    "OProjectManager",
+    "OProjectLeader",
+    "OBuilder"
+  ],
+  "control_spine": [
+    "ORFP",
+    "OAcceptance",
+    "OTester",
+    "OView",
+    "OAudit",
+    "OAsset",
+    "OManager",
+    "HUMAN_DECISION_OWNER"
+  ],
+  "role_separation": {
+    "OBusinessAdmin_is_project_manager": false,
+    "OManager_is_project_manager": false,
+    "OProject_is_execution_role": false,
+    "OProjectManager_equals_OProjectLeader": false,
+    "OBuilder_accepts_direct_business_request": false,
+    "OBuilder_developer_test_is_final_test": false
+  },
+  "scope": {
+    "company": "KNLSOFT",
+    "products": ["aTops", "SPACEMON"],
+    "ai_role": "EVIDENCE_BACKED_ANALYSIS_AND_DECISION_SUPPORT",
+    "primary_outcomes": [
+      "EXPLAIN_COMPANY_AND_PRODUCT_ROLES",
+      "SUPPORT_TECHNICAL_AND_BUYING_DECISIONS",
+      "ROUTE_DEMO_INQUIRY_AND_SUPPORT_WORK",
+      "PUBLISH_ONLY_TRACEABLE_CLAIMS"
+    ]
+  },
+  "input_documents": {
+    "paths": ["docs/01_STRATEGY_BRIEF.md", "docs/26_EXISTING_CONTENT_RISK_REGISTER.md"],
+    "range_semantics": "ALL_MARKDOWN_DOCUMENTS_01_THROUGH_26",
+    "classification": "ORUDA_INTAKE_INPUT_CANDIDATE",
+    "official_oruda_output": false
+  },
+  "required_method_profiles": [
+    "MP-ORUDA-ENTERPRISE-GOVERNANCE-V1",
+    "MP-ORUDA-HYBRID-PM-V1",
+    "MP-ORUDA-PROCESS-ORCHESTRATION-V1",
+    "MP-ORUDA-CONTROLLED-CONTENT-V1",
+    "MP-ORUDA-HCD-UIUX-V1",
+    "MP-ORUDA-CBD-ENGINEERING-V1",
+    "MP-ORUDA-TEST-VV-V1",
+    "MP-ORUDA-SERVICE-OPS-V1",
+    "MP-ORUDA-AI-SECURE-DELIVERY-V1"
+  ],
+  "execution_boundary": {
+    "actual_oruda_runtime_execution": false,
+    "actual_website_implementation": false,
+    "actual_test_execution": false,
+    "oview_final_verification": false,
+    "oaudit_final_pass": false,
+    "oasset_final_lock": false,
+    "production_go": false,
+    "commercial_go": false,
+    "official_delivery": false
+  },
+  "next_action": "REGISTER_AND_VALIDATE_BUSINESS_AND_PROJECT_DELEGATION_ROLE_BINDINGS",
+  "resume_trigger": "OBP_OBA_OPM_OPL_PROFILE_CONTRACT_AND_VALIDATOR_PASS"
+}
