@@ -25,14 +25,14 @@ ORUDA 프로젝트의 진입점은 기존 결정대로 `OBusinessPlanning`이다
 
 | Dependency | 역할 | 저장소 상태 | 판정 |
 |---|---|---|---|
-| OBusinessPlanning | 사업 목적·성과·범위·가설·의사결정 구조 | NOT FOUND | TRUE HARD GATE |
-| OBusinessAdmin | 사업 운영·정책·RFP·승인 기준 관리. PM 아님 | NOT FOUND | DEPENDENCY BLOCK |
-| ORFP / OAcceptance | 요구·평가·인수 기준 자산 | NOT FOUND | ASSURANCE DEPENDENCY BLOCK |
-| OProjectManager | Formal GO 이후 프로젝트 범위·일정·인력·이슈·리스크·KPI 관리 | NOT FOUND | EXECUTION ROLE BLOCK |
-| OProjectLeader | Workstream 분해·기술 실행·OBuilder 팀 의뢰·통합 조율 | NOT FOUND | EXECUTION ROLE BLOCK |
+| OBusinessPlanning | 사업 목적·성과·범위·가설·의사결정 구조 | ORUDA PR #25 Role Binding Candidate / Runtime 미확인 | TRUE HARD GATE |
+| OBusinessAdmin | 사업 운영·정책·RFP·승인 기준 관리. PM 아님 | ORUDA PR #25 Role Binding Candidate / Runtime 미확인 | DEPENDENCY BLOCK |
+| ORFP / OAcceptance | 요구·평가·인수 기준 자산 | ORUDA PR #25 Role Binding Candidate / Runtime 미확인 | ASSURANCE DEPENDENCY BLOCK |
+| OProjectManager | Formal GO 이후 프로젝트 범위·일정·인력·이슈·리스크·KPI 관리 | ORUDA PR #25 Role Binding Candidate / Runtime 미확인 | EXECUTION ROLE BLOCK |
+| OProjectLeader | Workstream 분해·기술 실행·OBuilder 팀 의뢰·통합 조율 | ORUDA PR #25 Role Binding Candidate / Runtime 미확인 | EXECUTION ROLE BLOCK |
 | OVisual | 시각 구조·재생성·시각 검증 계약 | NOT FOUND in current method matrix | DESIGN DEPENDENCY BLOCK |
 
-이 Gap을 우회하여 ODesign 또는 OBuilder부터 시작하지 않는다. 기존 문서를 OBusinessPlanning의 공식 산출물로 소급 표시하지 않는다.
+Role Binding Gap은 ORUDA Draft PR #25에서 Candidate로 보완됐고 전용/공통 CI가 모두 성공했다. 그러나 main 미적용이며 실행 가능한 Runtime 증거가 없으므로 이 Gap을 우회하여 ODesign 또는 OBuilder부터 시작하지 않는다. 기존 문서를 OBusinessPlanning의 공식 산출물로 소급 표시하지 않는다.
 
 ## 4. 적용되는 ORUDA 프로그램
 
