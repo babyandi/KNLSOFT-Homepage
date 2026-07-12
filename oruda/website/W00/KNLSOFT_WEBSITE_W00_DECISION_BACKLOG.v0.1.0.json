@@ -40,7 +40,7 @@
       "priority": "P0",
       "question": "Bind the Human Decision Owner and OManager for GO/HOLD",
       "owner": "HUMAN_DECISION_OWNER",
-      "state": "OPEN",
+      "state": "APPROVED_BY_USER_INSTRUCTION",
       "blocks": [
         "WG-00"
       ]
