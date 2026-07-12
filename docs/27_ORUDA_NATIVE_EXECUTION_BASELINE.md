@@ -59,7 +59,7 @@ ORUDA 프로젝트의 진입점은 기존 결정대로 `OBusinessPlanning`이다
 
 업무 위임 Spine은 다음과 같다.
 
-`OBusinessPlanning → OBusinessAdmin → Formal GO/HOLD → OProjectManager → OProjectLeader → OBuilder 내부 개발팀`
+`OBusinessPlanning → OBusinessAdmin → OManager (Formal GO/HOLD) → OProjectManager → OProjectLeader → OBuilder 내부 개발팀`
 
 독립 Assurance Spine은 이 위임 흐름 옆에서 동작한다.
 
