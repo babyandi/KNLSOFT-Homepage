@@ -1,0 +1,78 @@
+{
+  "registry_id": "KNLSOFT-WEBSITE-W01-MEASURE-REGISTRY",
+  "version": "0.1.0",
+  "status": "DRAFT_NO_NUMERIC_TARGETS",
+  "principle": "MEASURE_USER_AND_BUSINESS_OUTCOMES_NOT_VISUAL_OUTPUT_VOLUME",
+  "measures": [
+    {
+      "measure_id": "M-W01-001",
+      "outcome_id": "O-W01-001",
+      "name": "company comprehension task success",
+      "method": "five-second recall plus structured comprehension task",
+      "baseline": "NOT_MEASURED",
+      "target": "DECISION_REQUIRED"
+    },
+    {
+      "measure_id": "M-W01-002",
+      "outcome_id": "O-W01-002",
+      "name": "product distinction task success",
+      "method": "unmoderated comparison task",
+      "baseline": "NOT_MEASURED",
+      "target": "DECISION_REQUIRED"
+    },
+    {
+      "measure_id": "M-W01-003",
+      "outcome_id": "O-W01-003",
+      "name": "externally visible claim evidence coverage",
+      "method": "claim-evidence registry audit",
+      "baseline": "NOT_MEASURED",
+      "target": "NO_UNVERIFIED_FACTS"
+    },
+    {
+      "measure_id": "M-W01-004",
+      "outcome_id": "O-W01-004",
+      "name": "decision-information findability",
+      "method": "role-based task completion and time-on-task",
+      "baseline": "NOT_MEASURED",
+      "target": "DECISION_REQUIRED"
+    },
+    {
+      "measure_id": "M-W01-005",
+      "outcome_id": "O-W01-005",
+      "name": "qualified inquiry completion",
+      "method": "funnel completion plus required-context completeness",
+      "baseline": "NOT_MEASURED",
+      "target": "DECISION_REQUIRED"
+    },
+    {
+      "measure_id": "M-W01-006",
+      "outcome_id": "O-W01-006",
+      "name": "reusable asset promotion rate",
+      "method": "count independently validated assets promoted to ORUDA candidate registry",
+      "baseline": "0",
+      "target": "DECISION_REQUIRED"
+    },
+    {
+      "measure_id": "M-W01-007",
+      "outcome_id": "QUALITY",
+      "name": "accessibility and reflow conformance",
+      "method": "WCAG 2.2 automated and manual evidence",
+      "baseline": "NOT_TESTED",
+      "target": "POLICY_DEFINED_BEFORE_W12"
+    },
+    {
+      "measure_id": "M-W01-008",
+      "outcome_id": "QUALITY",
+      "name": "performance budget conformance",
+      "method": "field or lab evidence by approved budget",
+      "baseline": "NOT_TESTED",
+      "target": "BUDGET_REQUIRED_BEFORE_W10"
+    }
+  ],
+  "forbidden_metrics": [
+    "vanity page count",
+    "visual approval as business success",
+    "invented conversion uplift",
+    "unmeasured performance claim"
+  ]
+}
