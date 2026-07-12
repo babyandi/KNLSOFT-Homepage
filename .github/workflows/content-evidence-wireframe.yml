@@ -1,0 +1,25 @@
+name: KNLSOFT Content Evidence and Wireframe
+
+on:
+  pull_request:
+    paths:
+      - "docs/32_KNLSOFT_CONTENT_EVIDENCE_WIREFRAME_SPEC.v1.0.0.json"
+      - "scripts/validate_content_evidence_wireframe.py"
+      - ".github/workflows/content-evidence-wireframe.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Parse content and wireframe specification
+        run: python -m json.tool docs/32_KNLSOFT_CONTENT_EVIDENCE_WIREFRAME_SPEC.v1.0.0.json >/dev/null
+      - name: Validate claims sections states and gates
+        run: python scripts/validate_content_evidence_wireframe.py
