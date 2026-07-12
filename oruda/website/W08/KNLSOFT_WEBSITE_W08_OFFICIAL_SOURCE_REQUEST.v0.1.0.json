@@ -1,0 +1,96 @@
+{
+  "request_id": "KNLSOFT-WEBSITE-W08-OFFICIAL-SOURCE-REQUEST",
+  "version": "0.1.0",
+  "status": "OPEN",
+  "items": [
+    {
+      "id": "REQ-01",
+      "asset": "KNLSOFT official logo",
+      "accepted_formats": [
+        "SVG",
+        "AI",
+        "EPS",
+        "PDF vector",
+        "high-resolution PNG"
+      ],
+      "required_metadata": [
+        "owner",
+        "version",
+        "usage permission"
+      ]
+    },
+    {
+      "id": "REQ-02",
+      "asset": "aTops official specification",
+      "accepted_formats": [
+        "approved document",
+        "official product page",
+        "signed data sheet"
+      ],
+      "required_metadata": [
+        "owner",
+        "approval date",
+        "AI role",
+        "feature boundary"
+      ]
+    },
+    {
+      "id": "REQ-03",
+      "asset": "SPACEMON official specification",
+      "accepted_formats": [
+        "approved document",
+        "official product page",
+        "signed data sheet"
+      ],
+      "required_metadata": [
+        "owner",
+        "approval date",
+        "AI role",
+        "feature boundary"
+      ]
+    },
+    {
+      "id": "REQ-04",
+      "asset": "product screens or demo",
+      "accepted_formats": [
+        "sanitized screenshots",
+        "demo account",
+        "approved video"
+      ],
+      "required_metadata": [
+        "product version",
+        "data sanitization",
+        "publication permission"
+      ]
+    },
+    {
+      "id": "REQ-05",
+      "asset": "customer cases",
+      "accepted_formats": [
+        "customer-approved case sheet",
+        "contractual publication approval"
+      ],
+      "required_metadata": [
+        "customer permission",
+        "measured outcome source",
+        "expiry"
+      ]
+    },
+    {
+      "id": "REQ-06",
+      "asset": "inquiry and privacy policy",
+      "accepted_formats": [
+        "approved policy",
+        "recipient and SLA decision"
+      ],
+      "required_metadata": [
+        "data fields",
+        "purpose",
+        "retention",
+        "processor"
+      ]
+    }
+  ],
+  "repository_search_result": "NO_INDEXED_OFFICIAL_CANDIDATES_FOUND",
+  "absence_is_not_proof": "manual source delivery or repository inventory may still reveal assets"
+}
