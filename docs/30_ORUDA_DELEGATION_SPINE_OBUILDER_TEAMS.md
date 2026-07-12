@@ -2,7 +2,7 @@
 
 ## 1. 확정 위임 Spine
 
-`OBusinessPlanning → OBusinessAdmin → OProjectManager → OProjectLeader → OBuilder Development Teams`
+`OBusinessPlanning → OBusinessAdmin → OManager → OProjectManager → OProjectLeader → OBuilder Development Teams`
 
 Formal GO 이전에는 OProjectManager와 OProjectLeader를 활성화하지 않는다. Formal GO 판단은 ORFP/OAcceptance와 독립 Assurance 결과를 OManager가 통제하고 Human Decision Owner가 승인하는 별도 Control Spine에서 수행한다.
 
@@ -11,8 +11,8 @@ Formal GO 이전에는 OProjectManager와 OProjectLeader를 활성화하지 않�
 | Role/Program | 책임 | 산출물 | 다음 위임 | 금지 |
 |---|---|---|---|---|
 | OBusinessPlanning | 요청 배경, Goal Picture, Outcome, 가치·범위·가정 | Business Planning Package | OBusinessAdmin | 직접 개발팀 지시 |
-| OBusinessAdmin | 사업 운영 기준, RFP/요구·승인·이해관계자 관리 | Business Administration & RFP Package | Formal GO control / OProjectManager | 프로젝트 일정·개발팀 지휘 |
-| OManager | Evidence 기반 GO/HOLD·우선순위·통제 | Decision Record | OProject activation | PM 업무 수행 |
+| OBusinessAdmin | 사업 운영 기준, RFP/요구·승인·이해관계자 관리 | Business Administration & RFP Package | OManager | 프로젝트 일정·개발팀 지휘 |
+| OManager | Evidence 기반 GO/HOLD·우선순위·통제와 Project Handoff 승인 | Decision Record, Approved Project Handoff | OProjectManager via OProject activation | PM 업무 수행·개발팀 직접 지시 |
 | OProject | 실행 상태·KPI·Gate·Evidence·Package 보관 | Project Execution Governance Record | OProjectManager/Leader context | 별도 실행 역할로 행동 |
 | OProjectManager | 실행 계획, 일정, 범위, 자원, 이슈, 리스크, KPI, Gate | Project Execution Plan, Workstream Charter | OProjectLeader | 기술 구현 세부 지시 |
 | OProjectLeader | Workstream/Component 분해, 기술 조율, Build Request 발행·통합 | Build Request Package, Integration Plan | OBuilder Teams | GO/HOLD 최종 판단 |
