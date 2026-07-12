@@ -42,7 +42,7 @@ def validate_documents(d):
     stages=bind.get("stage_adoption",{})
     require(stages.get("W00")=="PREPARATION_IN_PROGRESS_HOLD","binding W00 state invalid")
     require(all(stages.get(f"W{x:02d}")=="CANDIDATE_PREPARATION_HOLD" for x in range(1,8)),"W01-W07 may only be candidate preparation")
-    require(all(stages.get(f"W{x:02d}")=="NOT_ASSESSED" for x in range(8,15)),"W08-W14 must remain NOT_ASSESSED")
+    require(stages.get("W08")=="ENTRY_PREPARATION_HOLD" and all(stages.get(f"W{x:02d}")=="NOT_ASSESSED" for x in range(9,15)),"W08 entry/W09-W14 state invalid")
     ex=i.get("execution_boundary",{})
     for flag in ["W01_completed","wireframe_allowed","visual_design_allowed","implementation_allowed","production_go","commercial_go","final_lock"]:
         require(ex.get(flag) is False,f"{flag} must remain false")
