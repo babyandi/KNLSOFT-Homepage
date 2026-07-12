@@ -1,0 +1,73 @@
+{
+  "artifact_id": "KNLSOFT-WEBSITE-W08-PAGE-RESPONSIBILITY",
+  "version": "0.1.0",
+  "status": "CANDIDATE_NOT_LAYOUT",
+  "pages": [
+    {
+      "id": "P-01",
+      "name": "Home",
+      "responsibility": "orient, establish verified relevance, route by need",
+      "primary_action": "explore products",
+      "secondary_action": "inquiry or demo",
+      "evidence_dependency": "approved company and product summaries"
+    },
+    {
+      "id": "P-02",
+      "name": "Company",
+      "responsibility": "publish official company identity, role and contact boundary",
+      "primary_action": "understand KNLSOFT",
+      "evidence_dependency": "official company profile and brand"
+    },
+    {
+      "id": "P-03",
+      "name": "Products",
+      "responsibility": "distinguish products neutrally",
+      "primary_action": "select evaluation path",
+      "evidence_dependency": "approved product boundaries"
+    },
+    {
+      "id": "P-04",
+      "name": "aTops",
+      "responsibility": "support aTops evaluation with approved claims",
+      "primary_action": "review evidence or request demo",
+      "evidence_dependency": "official aTops specification"
+    },
+    {
+      "id": "P-05",
+      "name": "SPACEMON",
+      "responsibility": "support SPACEMON evaluation with approved claims",
+      "primary_action": "review evidence or request demo",
+      "evidence_dependency": "official SPACEMON specification"
+    },
+    {
+      "id": "P-06",
+      "name": "AI and Evidence",
+      "responsibility": "explain AI roles, limitations, evidence and human controls",
+      "primary_action": "inspect evidence status",
+      "evidence_dependency": "verified AI runtime and policy evidence"
+    },
+    {
+      "id": "P-07",
+      "name": "Resources",
+      "responsibility": "provide approved materials and cases",
+      "primary_action": "open or download resource",
+      "evidence_dependency": "publication rights and current versions"
+    },
+    {
+      "id": "P-08",
+      "name": "Contact and Demo",
+      "responsibility": "collect qualified context with consent and recovery",
+      "primary_action": "submit request",
+      "evidence_dependency": "recipient, fields, SLA, privacy and integration decisions"
+    },
+    {
+      "id": "P-09",
+      "name": "Policies",
+      "responsibility": "publish privacy, terms and disclosures",
+      "primary_action": "review policy",
+      "evidence_dependency": "approved legal text"
+    }
+  ],
+  "global_rule": "ONE_PAGE_ONE_PRIMARY_RESPONSIBILITY_AND_MAX_TWO_STRONG_EMPHASIS_ELEMENTS",
+  "layout_defined": false
+}
