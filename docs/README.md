@@ -10,6 +10,7 @@ The active working baseline is now `ORUDA-Native Execution Baseline v1.0 Candida
 | 28 | Program · Artifact · Handoff Map | end-to-end ownership and output transfer | ACTIVE CONTROL CANDIDATE |
 | 29 | Gate · State Ledger | fail-closed stage status and triggers | ACTIVE |
 | 30 | Delegation Spine · OBuilder Team Routing | OProjectManager/OProjectLeader delegation and development teams | ACTIVE CONTROL CANDIDATE |
+| 31 | ORUDA Role Taxonomy Inheritance | pinned ORUDA Source-of-Truth binding and KNLSOFT role selection | ACTIVE CANDIDATE |
 
 Machine-readable control:
 
