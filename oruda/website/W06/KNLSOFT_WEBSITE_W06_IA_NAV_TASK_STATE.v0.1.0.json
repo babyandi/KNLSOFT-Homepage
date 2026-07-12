@@ -1,0 +1,124 @@
+{
+  "version": "0.1.0",
+  "status": "CANDIDATE_PREPARATION_HOLD",
+  "artifact_id": "KNLSOFT-WEBSITE-W06-IA-NAV-TASK-STATE",
+  "stage": "W06",
+  "entry_dependency": {
+    "WG_05": "HOLD",
+    "formal_execution": false
+  },
+  "sitemap_candidate": [
+    {
+      "id": "P-01",
+      "label": "Home",
+      "responsibility": "orient and route"
+    },
+    {
+      "id": "P-02",
+      "label": "Company",
+      "responsibility": "official company role and credibility"
+    },
+    {
+      "id": "P-03",
+      "label": "Products",
+      "responsibility": "neutral product overview and comparison"
+    },
+    {
+      "id": "P-04",
+      "label": "aTops",
+      "responsibility": "approved aTops information and evidence"
+    },
+    {
+      "id": "P-05",
+      "label": "SPACEMON",
+      "responsibility": "approved SPACEMON information and evidence"
+    },
+    {
+      "id": "P-06",
+      "label": "AI and Evidence",
+      "responsibility": "AI role boundary, governance and evidence status"
+    },
+    {
+      "id": "P-07",
+      "label": "Resources",
+      "responsibility": "approved materials and cases"
+    },
+    {
+      "id": "P-08",
+      "label": "Contact and Demo",
+      "responsibility": "qualified handoff with consent and recovery"
+    },
+    {
+      "id": "P-09",
+      "label": "Policies",
+      "responsibility": "privacy, terms and disclosures"
+    }
+  ],
+  "navigation_rules": [
+    "MAX_TWO_PRIMARY_EMPHASIS_ELEMENTS_PER_VIEW",
+    "ROLE_OR_PROBLEM_PATH_BEFORE_FEATURE_DUMP",
+    "PRODUCTS_REMAIN_DISTINGUISHABLE",
+    "EVIDENCE_STATUS_VISIBLE_NEAR_CLAIM",
+    "KOREAN_MEANING_UNIT_TYPOGRAPHY",
+    "NO_LAYOUT_APPROVAL_FROM_SITEMAP"
+  ],
+  "task_flows": [
+    {
+      "id": "TF-01",
+      "task": "find relevant product",
+      "states": [
+        "ENTRY",
+        "NEED_SELECT",
+        "COMPARE",
+        "PRODUCT",
+        "EVIDENCE",
+        "HANDOFF"
+      ]
+    },
+    {
+      "id": "TF-02",
+      "task": "request demo",
+      "states": [
+        "ENTRY",
+        "FORM",
+        "VALIDATION_ERROR",
+        "SUBMITTING",
+        "SUCCESS",
+        "DELIVERY_ERROR",
+        "RECOVERY"
+      ]
+    },
+    {
+      "id": "TF-03",
+      "task": "verify claim",
+      "states": [
+        "CLAIM",
+        "STATUS",
+        "SOURCE",
+        "DETAIL",
+        "EXPIRED_OR_MISSING",
+        "FOLLOWUP"
+      ]
+    }
+  ],
+  "global_states": [
+    "LOADING",
+    "READY",
+    "EMPTY",
+    "PARTIAL",
+    "VALIDATION_ERROR",
+    "NETWORK_ERROR",
+    "UNAVAILABLE",
+    "SUCCESS",
+    "EXPIRED_EVIDENCE"
+  ],
+  "exit_gate": {
+    "gate": "WG-06-IA-TASK-STATE",
+    "result": "HOLD",
+    "blockers": [
+      "WG-05_NOT_GRANTED",
+      "PAGE_RESPONSIBILITIES_NOT_APPROVED",
+      "CONTENT_INVENTORY_INCOMPLETE"
+    ]
+  }
+}
