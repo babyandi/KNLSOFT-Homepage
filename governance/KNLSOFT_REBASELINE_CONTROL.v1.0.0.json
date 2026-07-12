@@ -1,0 +1,68 @@
+{
+  "control_id": "KNLSOFT_REBASELINE_CONTROL_V1_0_0",
+  "state": "REBASELINE_ANALYZED_HOLD",
+  "captured_at": "2026-07-12",
+  "source_of_truth": {
+    "repository": "babyandi/KNLSOFT-Homepage",
+    "latest_main": "d1f1ec2a45339bef5ad58f3c025ba28a67538f3a",
+    "root_agents_sha": "225837b800be92b1567e6bcdcf98ca7f196d407b",
+    "global_policy": "ORUDA-GIT-TOP-LEVEL-POLICY_V1_0_0",
+    "master_queue_main": "f56ed570b2c5c024be70c71aed08885242064c4c"
+  },
+  "legacy_draft": {
+    "pull_request": 1,
+    "branch": "agent/homepage-design-baseline",
+    "head": "1ab2a7b5e86d4138a4382a06777f324e46379f97",
+    "merge_base": "ec07725686a32cd3106446723d45ad711a2a092e",
+    "ahead_by": 147,
+    "behind_by": 1,
+    "changed_file_count": 89,
+    "mergeable": false,
+    "disposition": "CONFLICT_HOLD_NO_FURTHER_WRITES",
+    "metadata_changed_file_count": 92,
+    "count_reconciliation": "CURRENT_PAGINATED_LIST_89_IS_INVENTORY_AUTHORITY_METADATA_DRIFT_RCA_OPEN"
+  },
+  "upstream_dependencies": [
+    {"ref":"babyandi/ORUDA#22","role":"ROLE_TAXONOMY","master_queue_state":"CONFLICT","required_before":"ROLE_BINDING_PROMOTION"},
+    {"ref":"babyandi/ORUDA#23","role":"WEBSITE_ASSET_DOMAIN","master_queue_state":"BLOCKED","required_before":"WEBSITE_ASSET_PROMOTION"},
+    {"ref":"babyandi/ORUDA#25","role":"BUSINESS_PLANNING_ADMIN","master_queue_state":"BLOCKED","required_before":"OBUSINESS_RUNTIME_PROMOTION"},
+    {"ref":"babyandi/ORUDA#29","role":"DICTIONARY_AND_QUALITY","master_queue_state":"CONFLICT","required_before":"CANONICAL_TERMINOLOGY_PROMOTION"}
+  ],
+  "master_queue": {
+    "program_id": "WEB-KNLSOFT",
+    "canonical_status": "DESIGN_BASELINE_SCOPE",
+    "gq1_to_gq8": "REGISTERED_NOT_EXECUTED",
+    "automation": "CANARY_PASS_AUTOMATION_DISABLED",
+    "github_actions": "DISABLED_NO_BUDGET",
+    "merge_authorized": false
+  },
+  "reconciliation_classes": [
+    {"class":"PRESERVE_CANDIDATE","criteria":"Unique project evidence or design input with no approved replacement"},
+    {"class":"REVALIDATE_ON_LATEST_MAIN","criteria":"Still relevant but depends on current policy registry or upstream candidate"},
+    {"class":"SUPERSEDE_DUPLICATE","criteria":"Duplicate document or validator covered by canonical ORUDA asset"},
+    {"class":"QUARANTINE_REJECTED_BASELINE","criteria":"UI CSS visual or claim content not approved as current baseline"},
+    {"class":"BLOCKED_EXTERNAL_EVIDENCE","criteria":"Requires official brand product AI screen case privacy or operational evidence"}
+  ],
+  "artifact_work_order": [
+    "INVENTORY_CURRENT_89_CHANGED_FILES",
+    "MAP_EACH_FILE_TO_ARTIFACT_ID_OWNER_METHOD_AND_GATE",
+    "DETECT_DUPLICATES_AND_CONFLICTS_WITH_LATEST_ORUDA_MAIN_AND_OPEN_PRS",
+    "CLASSIFY_PRESERVE_REVALIDATE_SUPERSEDE_QUARANTINE_OR_BLOCKED",
+    "BUILD_KNLSOFT_TAILORED_MASTER_ARTIFACT_CATALOG",
+    "VALIDATE_CATALOG_EXISTENCE_COMPLETENESS_SUITABILITY_TRACEABILITY_AND_INDEPENDENCE",
+    "PORT_ONLY_VALIDATED_MINIMUM_CHANGESET_FROM_LATEST_MAIN",
+    "GITHUB_READBACK_AND_DRAFT_PR_REVIEW"
+  ],
+  "protected_boundaries": {
+    "legacy_pr_merge": false,
+    "direct_main_write": false,
+    "visual_design": false,
+    "implementation": false,
+    "obuilder_activation": false,
+    "production_go": false,
+    "commercial_go": false,
+    "final_lock": false
+  },
+  "next_action": "CREATE_TAILORED_MASTER_ARTIFACT_CATALOG_FROM_INVENTORY",
+  "resume_trigger": "DEPENDENCY_CONFLICTS_RESOLVED_AND_MINIMUM_VALIDATED_PORT_SET_IDENTIFIED"
+}
