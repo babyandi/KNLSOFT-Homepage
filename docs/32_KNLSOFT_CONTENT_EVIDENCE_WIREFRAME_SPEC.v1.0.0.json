@@ -1,0 +1,106 @@
+{
+  "spec_id": "KNLSOFT_CONTENT_EVIDENCE_WIREFRAME_SPEC_V1_0_0",
+  "state": "LOW_FIDELITY_SPECIFICATION_CANDIDATE",
+  "inherits": "KNLSOFT_SERVICE_ARCHITECTURE_BLUEPRINT_V1_0_0",
+  "content_status_model": ["OFFICIAL","VERIFIED","CANDIDATE","CONCEPT","MISSING","WITHDRAWN"],
+  "publication_rule": {
+    "publishable": ["OFFICIAL","VERIFIED"],
+    "conditional_internal_only": ["CANDIDATE","CONCEPT"],
+    "not_publishable": ["MISSING","WITHDRAWN"]
+  },
+  "claim_data_evidence_matrix": [
+    {"id":"CLM-001","subject":"KNLSOFT_IDENTITY","claim":"COMPANY_IDENTITY_AND_DB_SQL_DOMAIN","data_required":["OFFICIAL_NAME","DESCRIPTION","HISTORY_OR_CAPABILITY_SCOPE"],"evidence_required":["APPROVED_COMPANY_PROFILE"],"owner":"KNLSOFT_MANAGEMENT","state":"MISSING","public_action":"OMIT_OR_NEUTRAL_PLACEHOLDER"},
+    {"id":"CLM-002","subject":"ATOPS_ROLE","claim":"PRE_OPERATION_SQL_QUALITY_CANDIDATE","data_required":["CURRENT_PURPOSE","INPUT","WORKFLOW","OUTPUT","SUPPORTED_CONTEXT","LIMITATION"],"evidence_required":["VERSIONED_PRODUCT_SPEC","PRODUCT_OWNER_APPROVAL"],"owner":"ATOPS_PRODUCT_OWNER","state":"CANDIDATE","public_action":"DO_NOT_ASSERT_AS_FACT"},
+    {"id":"CLM-003","subject":"SPACEMON_ROLE","claim":"IN_OPERATION_DB_PERFORMANCE_CANDIDATE","data_required":["CURRENT_PURPOSE","INPUT","WORKFLOW","OUTPUT","SUPPORTED_CONTEXT","LIMITATION"],"evidence_required":["VERSIONED_PRODUCT_SPEC","PRODUCT_OWNER_APPROVAL"],"owner":"SPACEMON_PRODUCT_OWNER","state":"CANDIDATE","public_action":"DO_NOT_ASSERT_AS_FACT"},
+    {"id":"CLM-004","subject":"ATOPS_AI","claim":"AI_ANALYSIS_AND_DECISION_SUPPORT","data_required":["INPUT","PROCESS_ROLE","OUTPUT","UNCERTAINTY","HUMAN_REVIEW","VERSION"],"evidence_required":["WORKING_IO_SAMPLE","EVALUATION_RESULT","AI_OWNER_APPROVAL"],"owner":"AI_OWNER","state":"MISSING","public_action":"BLOCK"},
+    {"id":"CLM-005","subject":"SPACEMON_AI","claim":"AI_ANALYSIS_AND_DECISION_SUPPORT","data_required":["INPUT","PROCESS_ROLE","OUTPUT","UNCERTAINTY","HUMAN_REVIEW","VERSION"],"evidence_required":["WORKING_IO_SAMPLE","EVALUATION_RESULT","AI_OWNER_APPROVAL"],"owner":"AI_OWNER","state":"MISSING","public_action":"BLOCK"},
+    {"id":"CLM-006","subject":"CUSTOMER_CASE","claim":"CUSTOMER_USE_AND_MEASURED_OUTCOME","data_required":["CONTEXT","BASELINE","INTERVENTION","OUTCOME","PERIOD"],"evidence_required":["CUSTOMER_PUBLICATION_RIGHT","MEASUREMENT_PROVENANCE"],"owner":"SALES_LEGAL","state":"MISSING","public_action":"BLOCK"},
+    {"id":"CLM-007","subject":"SECURITY_COMPATIBILITY","claim":"SECURITY_DEPLOYMENT_DBMS_AND_INTEGRATION_FIT","data_required":["CONTROL_OR_SUPPORTED_ITEM","VERSION","LIMIT"],"evidence_required":["CURRENT_TEST_CERTIFICATE_OR_APPROVED_SPEC"],"owner":"PRODUCT_SECURITY_ARCHITECTURE","state":"MISSING","public_action":"BLOCK"},
+    {"id":"CLM-008","subject":"SUPPORT","claim":"SUPPORT_AND_RESPONSE_OPERATION","data_required":["CHANNEL","OWNER","SEVERITY","TARGET","ESCALATION"],"evidence_required":["APPROVED_OPERATING_POLICY"],"owner":"BUSINESS_ADMIN_PRIVACY_SUPPORT","state":"MISSING","public_action":"BLOCK_FORM_SUBMISSION"}
+  ],
+  "page_wireframes": [
+    {
+      "page": "HOME",
+      "path": "/",
+      "primary_roles": ["EXECUTIVE_ECONOMIC_BUYER","TECHNICAL_EVALUATOR_ARCHITECT"],
+      "five_second_answer": ["WHO_KNLSOFT_IS","WHAT_ATOPS_AND_SPACEMON_ARE_FOR","WHAT_TO_DO_NEXT"],
+      "sections": [
+        {"order":1,"id":"HOME-ORIENT","purpose":"ORIENT","content":["VERIFIED_COMPANY_STATEMENT","PRODUCT_PAIR_SUMMARY"],"evidence":["CLM-001","CLM-002","CLM-003"],"layout":"ASYMMETRIC_7_5","primary_action":"COMPARE_PRODUCTS","fallback":"SHOW_VERIFICATION_PENDING_SAFE_COPY"},
+        {"order":2,"id":"HOME-DECISION","purpose":"ROUTE_BY_USER_JOB","content":["PRE_OPERATION_PATH","IN_OPERATION_PATH","CROSS_PRODUCT_PATH"],"evidence":["CLM-002","CLM-003"],"layout":"THREE_PATH_WITH_DIFFERENT_WEIGHT","primary_action":"OPEN_MATCHED_PRODUCT","fallback":"OPEN_PRODUCT_COMPARE"},
+        {"order":3,"id":"HOME-AI","purpose":"EXPLAIN_AI_CONTROL","content":["INPUT","ANALYSIS_ROLE","OUTPUT","LIMITATION","HUMAN_DECISION"],"evidence":["CLM-004","CLM-005"],"layout":"PROCESS_WITH_EVIDENCE_RAIL","primary_action":"REVIEW_AI_EVIDENCE","fallback":"HIDE_UNVERIFIED_DETAILS"},
+        {"order":4,"id":"HOME-TRUST","purpose":"SHOW_VERIFIABLE_TRUST","content":["APPROVED_EVIDENCE_INDEX","POLICY","SUPPORT"],"evidence":["CLM-006","CLM-007","CLM-008"],"layout":"EVIDENCE_LEDGER","primary_action":"OPEN_EVIDENCE","fallback":"SHOW_NO_APPROVED_EVIDENCE_STATE"},
+        {"order":5,"id":"HOME-ACT","purpose":"CONTEXTUAL_ACTION","content":["DEMO","INTRODUCTION","RESOURCE"],"evidence":["CLM-008"],"layout":"SINGLE_PRIMARY_SPLIT_SECONDARY","primary_action":"START_CONTEXTUAL_REQUEST","fallback":"SHOW_ALTERNATE_CONTACT_POLICY"}
+      ]
+    },
+    {
+      "page": "PRODUCT_COMPARE",
+      "path": "/products",
+      "primary_roles": ["TECHNICAL_EVALUATOR_ARCHITECT","DBA_OPERATIONS","SQL_QUALITY_LEAD_DEVELOPER"],
+      "five_second_answer": ["WHEN_ATOPS","WHEN_SPACEMON","WHEN_BOTH_OR_NEITHER"],
+      "sections": [
+        {"order":1,"id":"PC-BOUNDARY","purpose":"DISTINGUISH_PRODUCT_BOUNDARY","content":["PROBLEM_CONTEXT","LIFECYCLE_MOMENT","PRIMARY_USER","EXPECTED_OUTPUT"],"evidence":["CLM-002","CLM-003"],"layout":"COMPARISON_MATRIX","primary_action":"OPEN_PRODUCT","fallback":"MARK_FIELDS_UNVERIFIED"},
+        {"order":2,"id":"PC-CONTINUITY","purpose":"EXPLAIN_CROSS_PRODUCT_CANDIDATE","content":["PRE_OPERATION_TO_OPERATION_FLOW","HANDOFF_DATA","LIMIT"],"evidence":["CLM-002","CLM-003"],"layout":"HORIZONTAL_FLOW_WITH_BREAKPOINT_STACK","primary_action":"EVALUATE_BOTH","fallback":"OMIT_UNAPPROVED_CONTINUITY_CLAIM"},
+        {"order":3,"id":"PC-FIT","purpose":"SELF_SCREEN_FIT","content":["CONTEXT_QUESTIONS","REQUIRED_EVIDENCE","KNOWN_GAPS"],"evidence":["CLM-007"],"layout":"QUESTION_LED_CHECKLIST","primary_action":"REQUEST_TECHNICAL_REVIEW","fallback":"DOWNLOAD_REQUIREMENT_CHECKLIST"}
+      ]
+    },
+    {
+      "page": "PRODUCT_DETAIL_TEMPLATE",
+      "path": "/products/{product}",
+      "primary_roles": ["TECHNICAL_EVALUATOR_ARCHITECT","DBA_OPERATIONS","SQL_QUALITY_LEAD_DEVELOPER"],
+      "five_second_answer": ["PRODUCT_PURPOSE","WORKFLOW","AI_ROLE","FIT_AND_LIMIT"],
+      "sections": [
+        {"order":1,"id":"PD-POSITION","purpose":"STATE_VERIFIED_ROLE","content":["PURPOSE","TARGET_USER","LIFECYCLE_MOMENT"],"evidence":["PRODUCT_ROLE_CLAIM"],"layout":"EDITORIAL_8_4","primary_action":"REVIEW_WORKFLOW","fallback":"SHOW_PRODUCT_SPEC_PENDING"},
+        {"order":2,"id":"PD-WORKFLOW","purpose":"EXPLAIN_INPUT_TO_OUTPUT","content":["INPUT","STEPS","OUTPUT","HUMAN_ACTION"],"evidence":["VERSIONED_PRODUCT_SPEC","WORKING_SAMPLE"],"layout":"SEQUENTIAL_WITH_DETAIL_DRAWERS","primary_action":"OPEN_EVIDENCE","fallback":"CONCEPT_LABEL_REQUIRED"},
+        {"order":3,"id":"PD-AI","purpose":"EXPLAIN_AI_WITH_LIMITS","content":["AI_PURPOSE","INPUT","OUTPUT","UNCERTAINTY","LIMIT","REVIEW"],"evidence":["AI_EVIDENCE"],"layout":"TWO_LAYER_MODEL_AND_CONTROL","primary_action":"REVIEW_AI_EVIDENCE","fallback":"BLOCK_SECTION"},
+        {"order":4,"id":"PD-FIT","purpose":"DEFINE_FIT_AND_NON_FIT","content":["SUPPORTED_CONTEXT","PREREQUISITE","INTEGRATION","LIMIT","NON_FIT"],"evidence":["CURRENT_SPEC","TECHNICAL_TEST"],"layout":"FIT_NONFIT_ASYMMETRIC","primary_action":"REQUEST_FIT_REVIEW","fallback":"SHOW_REQUIRED_INFORMATION_LIST"},
+        {"order":5,"id":"PD-ACT","purpose":"START_QUALIFIED_REQUEST","content":["REQUEST_PURPOSE","PRODUCT","CONTEXT","CONSENT"],"evidence":["OPERATING_POLICY"],"layout":"COMPACT_CONTEXT_FORM","primary_action":"SUBMIT_REQUEST","fallback":"SAVE_LOCALLY_NOT_ALLOWED_SHOW_RECOVERY"}
+      ]
+    },
+    {
+      "page": "CONTACT",
+      "path": "/contact",
+      "primary_roles": ["ALL_EXTERNAL_ROLES"],
+      "five_second_answer": ["WHICH_REQUEST_TYPE","WHAT_DATA_IS_REQUIRED","WHAT_HAPPENS_NEXT"],
+      "sections": [
+        {"order":1,"id":"CT-INTENT","purpose":"SEPARATE_INTENT","content":["DEMO","INTRODUCTION","GENERAL"],"evidence":["CLM-008"],"layout":"INTENT_SELECTOR","primary_action":"SELECT_INTENT","fallback":"GENERAL_INQUIRY_WITH_LIMITED_FIELDS"},
+        {"order":2,"id":"CT-FORM","purpose":"COLLECT_MINIMUM_NECESSARY_DATA","content":["ORGANIZATION","ROLE","CONTACT","PURPOSE","PRODUCT","CONTEXT","CONSENT"],"evidence":["PRIVACY_POLICY"],"layout":"PROGRESSIVE_FORM","primary_action":"VALIDATE_AND_SUBMIT","fallback":"PRESERVE_SAFE_FIELDS_AND_EXPLAIN_ERROR"},
+        {"order":3,"id":"CT-RESULT","purpose":"CONFIRM_AND_RECOVER","content":["TRACE_ID","OWNER_OR_QUEUE","NEXT_STEP","EXPECTED_ACK","RECOVERY_CHANNEL"],"evidence":["ROUTING_POLICY"],"layout":"STATUS_RECEIPT","primary_action":"KEEP_RECEIPT","fallback":"MANUAL_CONTACT_WITH_REFERENCE"}
+      ]
+    }
+  ],
+  "responsive_contract": {
+    "breakpoints_are_content_driven": true,
+    "desktop_grid": 12,
+    "tablet_grid": 8,
+    "mobile_grid": 4,
+    "reflow_320_css_px": "NO_TWO_DIMENSIONAL_SCROLL_EXCEPT_ESSENTIAL_DATA_TABLE_WITH_ACCESSIBLE_ALTERNATIVE",
+    "touch_target": "MINIMUM_24_BY_24_CSS_PX_WITH_SPACING_PREFER_44",
+    "text_zoom": "200_PERCENT_WITHOUT_LOSS",
+    "orientation": "NO_SINGLE_ORIENTATION_DEPENDENCY"
+  },
+  "interaction_contract": {
+    "focus_visible": true,
+    "keyboard_complete": true,
+    "skip_link": true,
+    "status_messages_programmatic": true,
+    "errors": ["FIELD_ASSOCIATED","SUMMARY_LINKED","PRESERVE_VALID_INPUT","NO_COLOR_ONLY"],
+    "motion": ["REDUCED_MOTION_SUPPORTED","NO_AUTOPLAY_ESSENTIAL_INFORMATION","NO_PARALLAX_DEPENDENCY"]
+  },
+  "test_oracles": [
+    {"id":"ORC-01","test":"FIVE_SECOND_TEST","pass":"COMPANY_PRODUCT_BOUNDARY_AND_PRIMARY_NEXT_ACTION_RECALLED_WITHOUT_PROMPT"},
+    {"id":"ORC-02","test":"SQUINT_TEST","pass":"NO_MORE_THAN_TWO_STRONG_EMPHASIS_ELEMENTS_AND_READING_ORDER_VISIBLE"},
+    {"id":"ORC-03","test":"CLAIM_GATE","pass":"ZERO_CANDIDATE_MISSING_OR_WITHDRAWN_CLAIMS_PUBLISHED_AS_FACT"},
+    {"id":"ORC-04","test":"PRODUCT_BOUNDARY","pass":"TARGET_USERS_CORRECTLY_SELECT_ATOPS_SPACEMON_BOTH_OR_NEITHER"},
+    {"id":"ORC-05","test":"AI_COMPREHENSION","pass":"USERS_IDENTIFY_INPUT_OUTPUT_LIMITATION_AND_HUMAN_DECISION"},
+    {"id":"ORC-06","test":"FORM_RECOVERY","pass":"INVALID_NETWORK_AND_ROUTING_FAILURES_PRESERVE_SAFE_INPUT_AND_PROVIDE_RECOVERY"},
+    {"id":"ORC-07","test":"WCAG_REFLOW","pass":"320_CSS_PX_NO_INFORMATION_OR_FUNCTION_LOSS"},
+    {"id":"ORC-08","test":"LAYOUT_VARIETY","pass":"NO_CONSECUTIVE_PAGE_SECTIONS_REUSE_IDENTICAL_COMPOSITION"}
+  ],
+  "gate_result": {
+    "content_evidence": "HOLD_MANDATORY_EVIDENCE_MISSING",
+    "low_fidelity_wireframe": "PASS_CANDIDATE",
+    "representative_screen_visual_design": "BLOCKED",
+    "implementation": "BLOCKED",
+    "formal_go": false
+  }
+}
