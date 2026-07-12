@@ -1,0 +1,109 @@
+{
+  "version": "0.1.0",
+  "status": "CANDIDATE_PREPARATION_HOLD",
+  "artifact_id": "KNLSOFT-WEBSITE-W04-CONTENT-DATA-EVIDENCE",
+  "stage": "W04",
+  "entry_dependency": {
+    "WG_03": "HOLD",
+    "formal_execution": false
+  },
+  "content_domains": [
+    {
+      "id": "CD-01",
+      "name": "company",
+      "status": "SOURCE_REQUIRED"
+    },
+    {
+      "id": "CD-02",
+      "name": "aTops",
+      "status": "OFFICIAL_SPEC_REQUIRED"
+    },
+    {
+      "id": "CD-03",
+      "name": "SPACEMON",
+      "status": "OFFICIAL_SPEC_REQUIRED"
+    },
+    {
+      "id": "CD-04",
+      "name": "AI roles and boundaries",
+      "status": "RUNTIME_AND_POLICY_EVIDENCE_REQUIRED"
+    },
+    {
+      "id": "CD-05",
+      "name": "customer cases",
+      "status": "PUBLICATION_RIGHT_AND_EVIDENCE_REQUIRED"
+    },
+    {
+      "id": "CD-06",
+      "name": "resources",
+      "status": "INVENTORY_REQUIRED"
+    },
+    {
+      "id": "CD-07",
+      "name": "inquiry demo and support",
+      "status": "OWNER_POLICY_REQUIRED"
+    }
+  ],
+  "claim_contract": {
+    "required": [
+      "claim_id",
+      "subject",
+      "text",
+      "content_status",
+      "data_reference",
+      "evidence_reference",
+      "owner",
+      "allowed_surface",
+      "expiry_or_review_date"
+    ],
+    "allowed_statuses": [
+      "TEMPORARY",
+      "CONCEPT",
+      "VERIFIED",
+      "OFFICIAL"
+    ],
+    "external_fact_allowed_statuses": [
+      "VERIFIED",
+      "OFFICIAL"
+    ],
+    "current_verified_product_claim_count": 0
+  },
+  "data_entities": [
+    "Company",
+    "Product",
+    "Capability",
+    "AIRole",
+    "Evidence",
+    "CaseStudy",
+    "Resource",
+    "ContactRoute",
+    "Consent",
+    "Inquiry",
+    "DecisionLog"
+  ],
+  "evidence_types": [
+    "official_specification",
+    "approved_brand_asset",
+    "runtime_test",
+    "architecture_document",
+    "customer_approval",
+    "measured_result",
+    "security_or_policy_document",
+    "human_approval"
+  ],
+  "publication_rules": [
+    "NO_EVIDENCE_NO_FACT",
+    "CONCEPT_NOT_RENDERED_AS_FACT",
+    "SOURCE_AND_OWNER_REQUIRED",
+    "EXPIRED_EVIDENCE_FORCES_REVIEW"
+  ],
+  "exit_gate": {
+    "gate": "WG-04-CONTENT-EVIDENCE",
+    "result": "HOLD",
+    "blockers": [
+      "WG-03_NOT_GRANTED",
+      "OFFICIAL_PRODUCT_SOURCES_MISSING",
+      "CURRENT_VERIFIED_PRODUCT_CLAIM_COUNT_ZERO"
+    ]
+  }
+}
