@@ -166,7 +166,9 @@
       "gate": "OBP-ENTRY",
       "result": "BLOCK",
       "evidence": [
-        "OBUSINESSPLANNING_NOT_FOUND_IN_CURRENT_REPOSITORY_SEARCH_AND_METHOD_MATRIX"
+        "ORUDA_PR_25_ROLE_BINDING_CANDIDATE_CI_SUCCESS",
+        "OBUSINESSPLANNING_RUNTIME_NOT_EVIDENCED",
+        "PR_25_NOT_MAIN"
       ]
     },
     {
@@ -200,7 +202,9 @@
       "gate": "PROJECT-ACT-05",
       "result": "BLOCKED",
       "evidence": [
-        "OPROJECTMANAGER_BINDING_NOT_FOUND"
+        "ORUDA_PR_25_OPROJECTMANAGER_OPROJECTLEADER_BINDING_CANDIDATE",
+        "FORMAL_GO_NOT_GRANTED",
+        "RUNTIME_NOT_EVIDENCED"
       ]
     },
     {
@@ -212,7 +216,8 @@
       "gate": "LEADER-ROUTE-07",
       "result": "NOT_EXECUTED",
       "evidence": [
-        "OPROJECTLEADER_BINDING_NOT_FOUND"
+        "ORUDA_PR_25_OPROJECTLEADER_BINDING_CANDIDATE",
+        "PROJECT_BASELINE_NOT_EXECUTED"
       ]
     },
     {
@@ -260,5 +265,5 @@
   ],
   "true_hard_gate": "WG-00",
   "downstream_pass_allowed": false,
-  "resume_trigger": "W00_P0_DECISIONS_OFFICIAL_SOURCES_UPSTREAM_APPROVAL_AND_AUTHORITY_BINDINGS"
+  "resume_trigger": "ORUDA_PR_25_MAIN_APPLIED_AND_OBUSINESSPLANNING_RUNTIME_EXECUTION_EVIDENCE_PASS"
 }
