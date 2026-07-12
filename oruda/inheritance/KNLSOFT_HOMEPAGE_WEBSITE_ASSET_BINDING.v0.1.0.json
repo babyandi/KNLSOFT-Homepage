@@ -1,7 +1,7 @@
 {
   "binding_id": "KNLSOFT-HOMEPAGE-WEBSITE-PROGRAM-ASSET-BINDING",
   "version": "0.1.0",
-  "status": "UPSTREAM_DRAFT_CANDIDATE_PINNED",
+  "status": "UPSTREAM_DRAFT_CANDIDATE_PINNED_W00_PREPARATION",
   "consumer_repository": "babyandi/KNLSOFT-Homepage",
   "source": {
     "repository": "babyandi/ORUDA",
@@ -27,7 +27,7 @@
     ]
   },
   "stage_adoption": {
-    "W00": "NOT_ASSESSED",
+    "W00": "PREPARATION_IN_PROGRESS_HOLD",
     "W01": "NOT_ASSESSED",
     "W02": "NOT_ASSESSED",
     "W03": "NOT_ASSESSED",
