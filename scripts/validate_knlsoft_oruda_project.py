@@ -33,7 +33,7 @@ def validate_documents(
 ) -> list[str]:
     errors: list[str] = []
 
-    if project.get("state") != "ORUDA_NATIVE_INTAKE_REGISTERED_ENTRY_GATE_BLOCKED":
+    if project.get("state") != "ORUDA_NATIVE_W00_PREPARATION_IN_PROGRESS_ENTRY_GATE_HOLD":
         errors.append("PROJECT_STATE_FAIL_OPEN")
 
     baseline = project.get("oruda_baseline", {})
@@ -107,11 +107,13 @@ def validate_documents(
         errors.append("PROMOTION_GUARD_MISSING")
 
     gates = {item.get("gate"): item for item in ledger.get("gates", [])}
-    if ledger.get("state") != "ENTRY_GATE_BLOCKED_FAIL_CLOSED":
+    if ledger.get("state") != "W00_PREPARATION_PASS_CONTROL_CANDIDATE_EXIT_HOLD":
         errors.append("GATE_LEDGER_STATE_INVALID")
     if gates.get("OBP-ENTRY", {}).get("result") != "BLOCK":
         errors.append("OBP_GATE_LEDGER_FAIL_OPEN")
-    if ledger.get("true_hard_gate") != "OBP-ENTRY":
+    if gates.get("WG-00", {}).get("result") != "HOLD":
+        errors.append("W00_GATE_LEDGER_FAIL_OPEN")
+    if ledger.get("true_hard_gate") != "WG-00":
         errors.append("TRUE_HARD_GATE_INVALID")
     if ledger.get("downstream_pass_allowed") is not False:
         errors.append("DOWNSTREAM_PROMOTION_FAIL_OPEN")
@@ -133,7 +135,7 @@ def main() -> int:
         errors = [f"VALIDATION_EXCEPTION:{type(exc).__name__}:{exc}"]
     result = {
         "validator": "validate_knlsoft_oruda_project.py",
-        "decision": "PASS_CONTROL_STRUCTURE_WITH_OBP_ENTRY_BLOCK" if not errors else "BLOCK",
+        "decision": "PASS_CONTROL_STRUCTURE_WITH_W00_EXIT_HOLD" if not errors else "BLOCK",
         "oruda_runtime_execution": False,
         "website_implementation": False,
         "actual_test_execution": False,
