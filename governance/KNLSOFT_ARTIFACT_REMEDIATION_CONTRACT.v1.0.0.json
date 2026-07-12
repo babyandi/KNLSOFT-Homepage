@@ -1,0 +1,66 @@
+{
+  "contract_id": "KNLSOFT_ARTIFACT_REMEDIATION_CONTRACT_V1_0_0",
+  "state": "DESIGN_VALIDATED_REWORK_NOT_EXECUTED",
+  "baseline": {
+    "knlsoft_main": "8c1c09681c56e5460ecf62a4a71505ab72df73ad",
+    "oruda_main": "813e15d03e93c8dfe0e2d29827cfd7c5eed76a41",
+    "master_queue_main": "261fe4ae21ec8ccb337acb4427f86a0bcc27b4ff",
+    "program_registry": "ORUDA_INTERNAL_PROGRAM_REGISTRY_v1.2.0_P01_P27"
+  },
+  "scope": {
+    "finding_register": "governance/KNLSOFT_ARTIFACT_FINDING_REGISTER.v1.0.0.json",
+    "finding_count": 13,
+    "legacy_content_port_authorized": false,
+    "implementation_authorized": false
+  },
+  "assurance_chain": {
+    "request_owner": "OBusinessPlanning",
+    "control_owner": "OBusinessAdmin",
+    "portfolio_supervisor": "OManager",
+    "delivery_manager": "OProjectManager",
+    "artifact_author": "OProjectLeader",
+    "test_owner": "OTester",
+    "independent_review_owner": "OView",
+    "audit_evidence_owner": "OAudit",
+    "asset_owner": "OAsset",
+    "implementation_consumer": "OBuilder",
+    "decision_authority": "OManager"
+  },
+  "finding_groups": [
+    {
+      "finding_ids": ["KNL-AF-001","KNL-AF-002","KNL-AF-003","KNL-AF-004","KNL-AF-005","KNL-AF-006","KNL-AF-007","KNL-AF-008","KNL-AF-009","KNL-AF-010","KNL-AF-012"],
+      "defect": "OWNER_OR_APPROVAL_NOT_EXPLICIT",
+      "required_rework": ["declare_author","declare_reviewer","declare_approver","declare_decision_authority","declare_consumer","record_separation_of_duties"],
+      "acceptance_oracle": "ALL_REQUIRED_ROLES_PRESENT_AND_AUTHOR_NOT_SOLE_APPROVER",
+      "evidence": ["artifact_readback_sha","role_binding_record","otester_result","oview_independent_review"],
+      "failure_path": "KEEP_FINDING_OPEN_AND_PORT_AUTHORIZED_FALSE"
+    },
+    {
+      "finding_ids": ["KNL-AF-011","KNL-AF-013"],
+      "defect": "GATE_OR_EVIDENCE_NOT_EXPLICIT",
+      "required_rework": ["declare_gate","declare_entry_criteria","declare_acceptance_oracle","declare_required_evidence","declare_failure_path","declare_resume_trigger"],
+      "acceptance_oracle": "GATE_EVIDENCE_ORACLE_FAILURE_AND_RESUME_FIELDS_ARE_NONEMPTY",
+      "evidence": ["artifact_readback_sha","gate_test_result","otester_result","oview_independent_review"],
+      "failure_path": "KEEP_FINDING_OPEN_AND_CONTENT_EVIDENCE_GATE_HOLD"
+    }
+  ],
+  "gates": [
+    {"id":"G0_BASELINE","owner":"OBusinessAdmin","oracle":"EXACT_MAIN_SHAS_AND_P01_P27_REGISTRY_READ_BACK"},
+    {"id":"G1_REWORK","owner":"OProjectLeader","oracle":"ALL_13_SOURCE_ARTIFACTS_REBUILT_OR_EXPLICITLY_SUPERSEDED"},
+    {"id":"G2_TEST","owner":"OTester","oracle":"DETERMINISTIC_VALIDATOR_PASS_WITH_EVIDENCE"},
+    {"id":"G3_INDEPENDENT_REVIEW","owner":"OView","oracle":"NO_AUTHOR_SELF_APPROVAL_AND_CONTENT_SUITABILITY_REVIEWED"},
+    {"id":"G4_AUDIT","owner":"OAudit","oracle":"TRACEABILITY_AND_READBACK_EVIDENCE_COMPLETE"},
+    {"id":"G5_DECISION","owner":"OManager","oracle":"EXPLICIT_PORT_SET_APPROVAL"}
+  ],
+  "protected_boundaries": {
+    "artifact_port": "HOLD_UNTIL_G5",
+    "wireframe": "HOLD_UNTIL_CONTENT_EVIDENCE_GATE",
+    "visual_design": "HOLD",
+    "implementation": "HOLD",
+    "deployment": "PROHIBITED",
+    "production_go": "PROHIBITED",
+    "commercial_go": "PROHIBITED",
+    "final_lock": "PROHIBITED"
+  },
+  "resume_trigger": "ALL_13_FINDINGS_HAVE_FIXED_ARTIFACT_SHA_OTESTER_PASS_OVIEW_REVIEW_AND_OMANAGER_DECISION"
+}
