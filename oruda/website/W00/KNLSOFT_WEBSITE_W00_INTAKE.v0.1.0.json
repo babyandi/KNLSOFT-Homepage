@@ -1,0 +1,91 @@
+{
+  "artifact_id": "KNLSOFT-WEBSITE-W00-INTAKE",
+  "version": "0.1.0",
+  "stage": "W00",
+  "status": "PREPARATION_IN_PROGRESS_HOLD",
+  "project_id": "ORUDA-PROJECT-KNLSOFT-WEBSITE-001",
+  "requested_service": "KNLSOFT digital service website redesign and future website-builder learning project",
+  "intake_date": "2026-07-12",
+  "business_direction": {
+    "confirmed": [
+      "KNLSOFT is the immediate website scope",
+      "aTops and SPACEMON are priority products",
+      "both products require AI emphasis",
+      "the website is a digital service, not a visual-only homepage",
+      "future ORUDA Website Builder should reuse governed assets"
+    ],
+    "not_confirmed_as_fact": [
+      "specific product functions",
+      "AI runtime capabilities",
+      "performance outcomes",
+      "customer cases",
+      "official screenshots",
+      "official logos and brand files"
+    ]
+  },
+  "scope": {
+    "in": [
+      "company explanation",
+      "aTops product boundary",
+      "SPACEMON product boundary",
+      "evidence-safe AI positioning",
+      "technical and buying decision support",
+      "inquiry and demo routing",
+      "future CMS boundary definition"
+    ],
+    "out_until_approved": [
+      "unverified feature claims",
+      "unverified performance claims",
+      "fabricated customer cases",
+      "production deployment",
+      "commercial go",
+      "actual CMS implementation",
+      "actual AI runtime implementation"
+    ]
+  },
+  "profile_binding": {
+    "primary": "PROFILE-A-CONTENT",
+    "secondary": [
+      "PROFILE-E-AI",
+      "PROFILE-C-WORKFLOW"
+    ]
+  },
+  "prior_work_disposition": {
+    "public_screen": "REFERENCE_CANDIDATE_NOT_BASELINE",
+    "hero_and_visual_assets": "REFERENCE_CANDIDATE",
+    "accumulated_globals_css": "DEPRECATION_CANDIDATE",
+    "lower_layout": "DEPRECATION_CANDIDATE",
+    "documents_01_32": "ORUDA_INTAKE_INPUT_CANDIDATE"
+  },
+  "required_W00_outputs": [
+    "intake_record",
+    "scope_boundary",
+    "source_register",
+    "unknowns_register",
+    "decision_backlog",
+    "normal_exception_recovery_scenarios",
+    "role_authority_boundary",
+    "W00_gate_evidence"
+  ],
+  "gate": {
+    "preparation_result": "PASS_CONTROL_CANDIDATE",
+    "exit_gate": "WG-00-INTAKE-COMPLETE",
+    "exit_result": "HOLD",
+    "downstream_stage_completion_allowed": false,
+    "blockers": [
+      "OBUSINESSPLANNING_EXECUTION_PROFILE_AND_CONTRACT_NOT_BOUND",
+      "ORUDA_WEBSITE_ASSET_DOMAIN_PR23_DRAFT_UNMERGED",
+      "OFFICIAL_BRAND_PRODUCT_AND_EVIDENCE_SOURCES_MISSING",
+      "HUMAN_DECISION_OWNER_NOT_BOUND_IN_PROJECT_MANIFEST"
+    ]
+  },
+  "execution_boundary": {
+    "W01_completed": false,
+    "wireframe_allowed": false,
+    "visual_design_allowed": false,
+    "implementation_allowed": false,
+    "production_go": false,
+    "commercial_go": false,
+    "final_lock": false
+  }
+}
