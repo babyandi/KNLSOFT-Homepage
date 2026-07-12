@@ -1,0 +1,25 @@
+name: KNLSOFT Service Architecture Blueprint
+
+on:
+  pull_request:
+    paths:
+      - "docs/31_KNLSOFT_SERVICE_ARCHITECTURE_BLUEPRINT.v1.0.0.json"
+      - "scripts/validate_service_architecture_blueprint.py"
+      - ".github/workflows/service-architecture-blueprint.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Parse blueprint
+        run: python -m json.tool docs/31_KNLSOFT_SERVICE_ARCHITECTURE_BLUEPRINT.v1.0.0.json >/dev/null
+      - name: Validate pre-GO boundaries and coverage
+        run: python scripts/validate_service_architecture_blueprint.py
