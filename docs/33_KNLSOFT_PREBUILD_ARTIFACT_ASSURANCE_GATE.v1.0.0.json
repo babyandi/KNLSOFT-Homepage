@@ -1,0 +1,56 @@
+{
+  "gate_id": "KNLSOFT_PREBUILD_ARTIFACT_ASSURANCE_GATE_V1_0_0",
+  "state": "HOLD_ARTIFACT_VALIDATION_NOT_EXECUTED",
+  "oruda_policy": {
+    "repository": "babyandi/ORUDA",
+    "pull_request": 25,
+    "path": "governance/artifacts/ORUDA_PREBUILD_ARTIFACT_ASSURANCE_POLICY.v1.0.0.json",
+    "candidate_commit": "5d9807468a22a03a2d3c4de060c01c195134a68b"
+  },
+  "required_validation_packages": [
+    "TAILORED_ARTIFACT_CATALOG",
+    "ARTIFACT_COVERAGE_MATRIX",
+    "REQUIREMENT_TRACEABILITY_MATRIX",
+    "VALIDATION_PLAN",
+    "VALIDATION_RESULTS",
+    "FINDING_REGISTER",
+    "REWORK_RESULTS",
+    "EXCEPTION_DECISIONS",
+    "INDEPENDENCE_MATRIX",
+    "EVIDENCE_INDEX",
+    "ASSET_AND_PROVENANCE_MANIFEST",
+    "PREBUILD_DECISION_PACKAGE"
+  ],
+  "required_assurance_roles": ["OProjectManager","OProjectLeader","OTester","OView","OAudit","OAsset","OManager"],
+  "current_state": {
+    "master_catalog_complete": false,
+    "tailoring_complete": false,
+    "templates_complete": false,
+    "artifact_content_complete": false,
+    "independent_validation_complete": false,
+    "critical_findings_closed": false,
+    "omanager_prebuild_go": false,
+    "oprojectleader_build_request_authorized": false,
+    "obuilder_activation": false,
+    "visual_design_activation": false,
+    "implementation_activation": false
+  },
+  "allowed_work": [
+    "ARTIFACT_INVENTORY",
+    "TAILORING",
+    "TEMPLATE_CREATION",
+    "ARTIFACT_AUTHORING",
+    "ARTIFACT_VALIDATION",
+    "FINDING_REWORK",
+    "EVIDENCE_COLLECTION"
+  ],
+  "prohibited_work": [
+    "FINAL_VISUAL_DESIGN",
+    "OPROJECTLEADER_BUILD_REQUEST",
+    "OBUILDER_IMPLEMENTATION",
+    "PRODUCTION_DEPLOYMENT",
+    "COMMERCIAL_GO",
+    "FINAL_LOCK"
+  ],
+  "resume_trigger": "ALL_REQUIRED_ARTIFACTS_VALIDATED_AND_OMANAGER_PREBUILD_GO_GRANTED"
+}
