@@ -1,0 +1,50 @@
+{
+  "binding_id": "KNLSOFT-WEBSITE-PROJECT-AUTHORITY-BINDING",
+  "version": "0.1.0",
+  "status": "USER_CONFIRMED_CONTROL_BINDING",
+  "confirmation": {
+    "source": "user instruction: 진행해",
+    "date": "2026-07-12",
+    "scope": "continue project governance and preparation; no production or final approval"
+  },
+  "instances": [
+    {
+      "instance_id": "ROLE-HDO-KNLSOFT-WEB-001",
+      "role": "HUMAN_DECISION_OWNER",
+      "subject": "USER_CONFIRMED_OWNER",
+      "state": "ACTIVE_FOR_PROJECT_DECISIONS",
+      "authority": [
+        "approve business decisions",
+        "approve official sources",
+        "grant or deny stage exit with evidence"
+      ],
+      "forbidden": [
+        "self-issue OAudit final pass",
+        "approve unavailable evidence"
+      ]
+    },
+    {
+      "instance_id": "ROLE-OMANAGER-KNLSOFT-WEB-001",
+      "role": "OManager",
+      "subject": "ORUDA_OMANAGER",
+      "state": "ACTIVE_FOR_GO_HOLD_CONTROL",
+      "authority": [
+        "GO_HOLD",
+        "project handoff"
+      ],
+      "forbidden": [
+        "act as OProjectManager",
+        "directly assign OBuilder",
+        "self-issue test or audit pass"
+      ]
+    }
+  ],
+  "inactive_roles": [
+    "OProjectManager",
+    "OProjectLeader",
+    "OBuilder"
+  ],
+  "production_go": false,
+  "commercial_go": false,
+  "final_lock": false
+}
