@@ -1,0 +1,129 @@
+{
+  "version": "0.1.0",
+  "status": "CANDIDATE_PREPARATION_HOLD",
+  "artifact_id": "KNLSOFT-WEBSITE-W07-POLICY-PERMISSION-SECURITY",
+  "stage": "W07",
+  "entry_dependency": {
+    "WG_06": "HOLD",
+    "formal_execution": false
+  },
+  "actors": [
+    {
+      "actor": "anonymous visitor",
+      "permissions": [
+        "read published content",
+        "submit approved inquiry"
+      ],
+      "forbidden": [
+        "view drafts",
+        "view restricted evidence"
+      ]
+    },
+    {
+      "actor": "content author candidate",
+      "permissions": [
+        "create draft"
+      ],
+      "forbidden": [
+        "self-approve",
+        "publish"
+      ]
+    },
+    {
+      "actor": "evidence reviewer candidate",
+      "permissions": [
+        "verify source linkage"
+      ],
+      "forbidden": [
+        "alter source",
+        "grant audit pass"
+      ]
+    },
+    {
+      "actor": "publisher candidate",
+      "permissions": [
+        "publish human-approved content"
+      ],
+      "forbidden": [
+        "publish missing evidence"
+      ]
+    },
+    {
+      "actor": "administrator candidate",
+      "permissions": [
+        "manage approved configuration"
+      ],
+      "forbidden": [
+        "bypass audit log"
+      ]
+    }
+  ],
+  "policies": [
+    {
+      "id": "POL-01",
+      "name": "claim safety",
+      "rule": "unverified product and AI claims cannot render as fact"
+    },
+    {
+      "id": "POL-02",
+      "name": "privacy minimization",
+      "rule": "collect only approved inquiry fields with purpose and retention"
+    },
+    {
+      "id": "POL-03",
+      "name": "consent",
+      "rule": "record explicit consent version and timestamp where required"
+    },
+    {
+      "id": "POL-04",
+      "name": "security",
+      "rule": "server-side validation, output encoding, rate limits and secret isolation required"
+    },
+    {
+      "id": "POL-05",
+      "name": "accessibility",
+      "rule": "WCAG 2.2 AA target with reflow, keyboard, focus and semantic evidence"
+    },
+    {
+      "id": "POL-06",
+      "name": "AI disclosure",
+      "rule": "state AI role, limitation, human control and fallback when AI interaction exists"
+    },
+    {
+      "id": "POL-07",
+      "name": "asset license",
+      "rule": "source, license and permitted surface required"
+    },
+    {
+      "id": "POL-08",
+      "name": "auditability",
+      "rule": "content, evidence, approval and release changes require trace"
+    }
+  ],
+  "threats": [
+    "inquiry spam",
+    "injection",
+    "XSS",
+    "CSRF_if_authenticated",
+    "PII leakage",
+    "unauthorized publishing",
+    "stale evidence",
+    "supply_chain_dependency",
+    "misleading_AI_claim"
+  ],
+  "exit_gate": {
+    "gate": "WG-07-POLICY-SECURITY",
+    "result": "HOLD",
+    "blockers": [
+      "WG-06_NOT_GRANTED",
+      "LEGAL_AND_PRIVACY_OWNER_UNBOUND",
+      "DATA_RETENTION_AND_INTEGRATIONS_UNDECIDED"
+    ]
+  },
+  "execution_boundary": {
+    "form_backend": false,
+    "CMS": false,
+    "authentication": false,
+    "production_security_test": false
+  }
+}
