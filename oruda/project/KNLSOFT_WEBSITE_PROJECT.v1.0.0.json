@@ -21,18 +21,46 @@
     "bypass_allowed": false
   },
   "missing_dependencies": [
-    {"name": "OBusinessPlanning", "type": "PROGRAM", "severity": "TRUE_HARD_GATE"},
-    {"name": "OBusinessAdmin", "type": "PROGRAM", "severity": "DEPENDENCY_BLOCK"},
-    {"name": "ORFP", "type": "PROGRAM", "severity": "DEPENDENCY_BLOCK"},
-    {"name": "OAcceptance", "type": "PROGRAM_OR_ROLE", "severity": "ASSURANCE_DEPENDENCY_BLOCK"},
-    {"name": "OProjectManager", "type": "PROGRAM_OR_ROLE", "severity": "EXECUTION_ROLE_BLOCK"},
-    {"name": "OProjectLeader", "type": "PROGRAM_OR_ROLE", "severity": "EXECUTION_ROLE_BLOCK"},
-    {"name": "OVisual", "type": "PROGRAM_OR_COMPONENT", "severity": "DESIGN_DEPENDENCY_BLOCK"}
+    {
+      "name": "OBusinessPlanning",
+      "type": "PROGRAM",
+      "severity": "TRUE_HARD_GATE"
+    },
+    {
+      "name": "OBusinessAdmin",
+      "type": "PROGRAM",
+      "severity": "DEPENDENCY_BLOCK"
+    },
+    {
+      "name": "ORFP",
+      "type": "PROGRAM",
+      "severity": "DEPENDENCY_BLOCK"
+    },
+    {
+      "name": "OAcceptance",
+      "type": "PROGRAM_OR_ROLE",
+      "severity": "ASSURANCE_DEPENDENCY_BLOCK"
+    },
+    {
+      "name": "OProjectManager",
+      "type": "PROGRAM_OR_ROLE",
+      "severity": "EXECUTION_ROLE_BLOCK"
+    },
+    {
+      "name": "OProjectLeader",
+      "type": "PROGRAM_OR_ROLE",
+      "severity": "EXECUTION_ROLE_BLOCK"
+    },
+    {
+      "name": "OVisual",
+      "type": "PROGRAM_OR_COMPONENT",
+      "severity": "DESIGN_DEPENDENCY_BLOCK"
+    }
   ],
   "delegation_spine": [
     "OBusinessPlanning",
     "OBusinessAdmin",
-    "FORMAL_GO_HOLD",
+    "OManager",
     "OProjectManager",
     "OProjectLeader",
     "OBuilder"
@@ -57,7 +85,10 @@
   },
   "scope": {
     "company": "KNLSOFT",
-    "products": ["aTops", "SPACEMON"],
+    "products": [
+      "aTops",
+      "SPACEMON"
+    ],
     "ai_role": "EVIDENCE_BACKED_ANALYSIS_AND_DECISION_SUPPORT",
     "primary_outcomes": [
       "EXPLAIN_COMPANY_AND_PRODUCT_ROLES",
@@ -67,7 +98,10 @@
     ]
   },
   "input_documents": {
-    "paths": ["docs/01_STRATEGY_BRIEF.md", "docs/26_EXISTING_CONTENT_RISK_REGISTER.md"],
+    "paths": [
+      "docs/01_STRATEGY_BRIEF.md",
+      "docs/26_EXISTING_CONTENT_RISK_REGISTER.md"
+    ],
     "range_semantics": "ALL_MARKDOWN_DOCUMENTS_01_THROUGH_26",
     "classification": "ORUDA_INTAKE_INPUT_CANDIDATE",
     "official_oruda_output": false
