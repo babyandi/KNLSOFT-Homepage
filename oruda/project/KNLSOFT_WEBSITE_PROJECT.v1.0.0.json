@@ -135,5 +135,17 @@
     "artifact_root": "oruda/website/W00",
     "exit_gate": "WG-00-INTAKE-COMPLETE",
     "exit_result": "HOLD"
+  },
+  "W01": {
+    "status": "CANDIDATE_PREPARATION_HOLD",
+    "artifact_root": "oruda/website/W01",
+    "exit_gate": "WG-01-OUTCOME-DEFINED",
+    "exit_result": "HOLD"
+  },
+  "W02": {
+    "status": "CANDIDATE_PREPARATION_HOLD",
+    "artifact_root": "oruda/website/W02",
+    "exit_gate": "WG-02-USERS-DEFINED",
+    "exit_result": "HOLD"
   }
 }
