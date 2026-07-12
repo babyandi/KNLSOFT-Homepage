@@ -1,0 +1,93 @@
+{
+  "artifact_id": "KNLSOFT-WEBSITE-W02-BUYING-DECISION-FLOW",
+  "version": "0.1.0",
+  "status": "CANDIDATE_PREPARATION_HOLD",
+  "decision_roles": [
+    {
+      "role_id": "BR-01",
+      "name": "Initiator",
+      "decision_need": "Is the problem important enough to investigate?"
+    },
+    {
+      "role_id": "BR-02",
+      "name": "Domain evaluator",
+      "decision_need": "Does the product fit the operational problem?"
+    },
+    {
+      "role_id": "BR-03",
+      "name": "Technical validator",
+      "decision_need": "Can it integrate, operate and scale within constraints?"
+    },
+    {
+      "role_id": "BR-04",
+      "name": "Security and compliance reviewer",
+      "decision_need": "Are data, AI, permission and audit risks controlled?"
+    },
+    {
+      "role_id": "BR-05",
+      "name": "Economic buyer",
+      "decision_need": "Is value credible relative to cost and risk?"
+    },
+    {
+      "role_id": "BR-06",
+      "name": "Final approver",
+      "decision_need": "Is there sufficient evidence and accountable ownership to proceed?"
+    },
+    {
+      "role_id": "BR-07",
+      "name": "Future user or administrator",
+      "decision_need": "Can it be adopted and operated safely?"
+    }
+  ],
+  "candidate_flow": [
+    {
+      "step": 1,
+      "state": "AWARE",
+      "website_responsibility": "clarify company and problem relevance"
+    },
+    {
+      "step": 2,
+      "state": "EXPLORE",
+      "website_responsibility": "distinguish aTops and SPACEMON without unsupported claims"
+    },
+    {
+      "step": 3,
+      "state": "EVALUATE",
+      "website_responsibility": "provide role-specific evidence and constraints"
+    },
+    {
+      "step": 4,
+      "state": "VALIDATE",
+      "website_responsibility": "route to approved technical material, demo or inquiry"
+    },
+    {
+      "step": 5,
+      "state": "ALIGN",
+      "website_responsibility": "support internal sharing and multi-role review"
+    },
+    {
+      "step": 6,
+      "state": "HANDOFF",
+      "website_responsibility": "capture qualified context and confirm accountable follow-up"
+    }
+  ],
+  "exceptions": [
+    {
+      "exception": "visitor cannot identify relevant product",
+      "recovery": "problem-led comparison and neutral inquiry route"
+    },
+    {
+      "exception": "evidence is unavailable",
+      "recovery": "show evidence status and request approved follow-up rather than claim"
+    },
+    {
+      "exception": "visitor role is unknown",
+      "recovery": "provide role-neutral overview then progressive disclosure"
+    },
+    {
+      "exception": "inquiry submission fails",
+      "recovery": "preserve input locally where safe, explain error and offer approved alternate channel"
+    }
+  ],
+  "mapping_status": "ROLE_AND_FLOW_HYPOTHESIS_REQUIRES_W02_RESEARCH"
+}
