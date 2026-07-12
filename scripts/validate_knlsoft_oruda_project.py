@@ -17,7 +17,7 @@ EXPECTED_MISSING = {
     "OProjectManager", "OProjectLeader", "OVisual",
 }
 EXPECTED_DELEGATION = [
-    "OBusinessPlanning", "OBusinessAdmin", "FORMAL_GO_HOLD",
+    "OBusinessPlanning", "OBusinessAdmin", "OManager",
     "OProjectManager", "OProjectLeader", "OBuilder",
 ]
 EXPECTED_TEAMS = {f"OBT-{i:02d}" for i in range(1, 11)}
