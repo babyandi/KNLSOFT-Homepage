@@ -1,0 +1,62 @@
+{
+  "binding_id": "KNLSOFT-HOMEPAGE-WEBSITE-PROGRAM-ASSET-BINDING",
+  "version": "0.1.0",
+  "status": "UPSTREAM_DRAFT_CANDIDATE_PINNED",
+  "consumer_repository": "babyandi/KNLSOFT-Homepage",
+  "source": {
+    "repository": "babyandi/ORUDA",
+    "asset_domain_id": "ORUDA-WEBSITE-PROGRAM-ASSET-DOMAIN",
+    "asset_domain_version": "0.1.0",
+    "commit": "102b84c091e132cf965c4f47e3c0daa5d617bb2a",
+    "pull_request": "https://github.com/babyandi/ORUDA/pull/23"
+  },
+  "inheritance_mode": "PINNED_REFERENCE",
+  "local_override": false,
+  "embedded_common_assets": [],
+  "profile_selection": {
+    "primary": "PROFILE-A-CONTENT",
+    "secondary": [
+      {
+        "profile_id": "PROFILE-E-AI",
+        "scope": "aTops and SPACEMON AI positioning; only verified claims may become active"
+      },
+      {
+        "profile_id": "PROFILE-C-WORKFLOW",
+        "scope": "inquiry, demo request and future CMS/admin workflows"
+      }
+    ]
+  },
+  "stage_adoption": {
+    "W00": "NOT_ASSESSED",
+    "W01": "NOT_ASSESSED",
+    "W02": "NOT_ASSESSED",
+    "W03": "NOT_ASSESSED",
+    "W04": "NOT_ASSESSED",
+    "W05": "NOT_ASSESSED",
+    "W06": "NOT_ASSESSED",
+    "W07": "NOT_ASSESSED",
+    "W08": "NOT_ASSESSED",
+    "W09": "NOT_ASSESSED",
+    "W10": "NOT_ASSESSED",
+    "W11": "NOT_ASSESSED",
+    "W12": "NOT_ASSESSED",
+    "W13": "NOT_ASSESSED",
+    "W14": "NOT_ASSESSED"
+  },
+  "prior_documents": "ORUDA_INTAKE_INPUT_CANDIDATE",
+  "allowed_local_objects": [
+    "website_project_manifest",
+    "project_content",
+    "project_evidence",
+    "project_asset_binding",
+    "project_role_instance"
+  ],
+  "execution_boundary": {
+    "website_rebuilt": false,
+    "runtime_execution": false,
+    "actual_test_execution": false,
+    "production_go": false,
+    "commercial_go": false,
+    "final_lock": false
+  }
+}
