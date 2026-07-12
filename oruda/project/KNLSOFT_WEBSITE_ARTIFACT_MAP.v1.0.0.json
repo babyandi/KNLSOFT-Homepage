@@ -1,0 +1,45 @@
+{
+  "map_id": "KNLSOFT_WEBSITE_ORUDA_ARTIFACT_MAP_V1_0_0",
+  "project_id": "ORUDA-PROJECT-KNLSOFT-WEBSITE-001",
+  "state": "CONTROL_CANDIDATE",
+  "stages": [
+    {"stage":"S00","owner":"ODocument","outputs":["SOURCE_REGISTER","CLASSIFICATION","CLAIM_CANDIDATE","PROVENANCE_GAP"],"gate":"DOC-INTAKE","state":"PARTIAL"},
+    {"stage":"S01","owner":"OBusinessPlanning","outputs":["GOAL_PICTURE","BUSINESS_MISSION","OUTCOME_MAP","SCOPE","KPI_HYPOTHESIS","ASSUMPTION_DECISION_LOG"],"gate":"OBP-ENTRY","state":"BLOCKED"},
+    {"stage":"S02","owner":"OBusinessAdmin+ORFP+OAcceptance","outputs":["GOVERNANCE_MODEL","STAKEHOLDER_APPROVAL","REQUIREMENT_RFP_PACK","ACCEPTANCE_PACKAGE"],"gate":"ADMIN-RFP-02","state":"BLOCKED"},
+    {"stage":"S03","owner":"OTester+OView+OAudit+OAsset.Candidate","outputs":["PRE_GO_TEST_RESULT","INDEPENDENT_VERIFICATION","EVIDENCE_INDEX","CANDIDATE_ASSET_PACKAGE"],"gate":"ASSURE-03","state":"NOT_EXECUTED"},
+    {"stage":"S04","owner":"OManager+HumanDecisionOwner","outputs":["FORMAL_GO_HOLD_DECISION","PROJECT_HANDOFF_PACKAGE"],"gate":"FORMAL-GO-04","state":"NOT_GRANTED"},
+    {"stage":"S05","owner":"OProject","outputs":["EXECUTION_STATE","KPI_GATE_EVIDENCE_REGISTRY","EXECUTION_PACKAGE_REGISTRY"],"gate":"PROJECT-ACT-05","state":"BLOCKED"},
+    {"stage":"S06","owner":"OProjectManager","outputs":["PROJECT_EXECUTION_PLAN","SCHEDULE_SCOPE_RESOURCE","RAID","WORKSTREAM_CHARTER"],"gate":"PM-BASELINE-06","state":"NOT_EXECUTED"},
+    {"stage":"S07","owner":"OProjectLeader","outputs":["WORK_BREAKDOWN","BUILD_REQUEST_PACKAGES","INTEGRATION_TEST_HANDOFF_PLAN"],"gate":"LEADER-ROUTE-07","state":"NOT_EXECUTED"},
+    {"stage":"S08","owner":"OReport+ODocument+ODesign+OVisual","outputs":["SOURCE_CLAIM_MAP","PAGE_CONTENT_MODEL","IA_TASK_STATE","INTERACTION_VISUAL_CONTRACT"],"gate":"CONTENT-DESIGN-08","state":"BLOCKED"},
+    {"stage":"S09","owner":"OBuilder.InternalTeams","outputs":["COMPONENT_MODEL","INTERFACE_CONTRACT","DEPENDENCY_GRAPH","SOURCE","BUILD_EVIDENCE","DEVELOPER_TEST_EVIDENCE"],"gate":"BUILD-09","state":"NOT_EXECUTED"},
+    {"stage":"S10","owner":"OTester","outputs":["TEST_STRATEGY","TEST_PLAN","TEST_CASE_OR_MODEL","TEST_RESULT","DEFECT_RECORD"],"gate":"TEST-10","state":"NOT_EXECUTED"},
+    {"stage":"S11","owner":"OView","outputs":["VERIFICATION_PLAN","INDEPENDENCE_MATRIX","GATE_RESULT","FALSE_PASS_CHALLENGE"],"gate":"VIEW-11","state":"NOT_EXECUTED"},
+    {"stage":"S12","owner":"OAudit","outputs":["AUDIT_PLAN","EVIDENCE_INDEX","FINDING_REGISTER","DECISION_TRAIL"],"gate":"AUDIT-12","state":"NOT_EXECUTED"},
+    {"stage":"S13","owner":"OAsset","outputs":["ASSET_REGISTER","PROVENANCE","VERSION_LINEAGE","DEPENDENCY_BOM"],"gate":"ASSET-13","state":"NOT_EXECUTED"},
+    {"stage":"S14","owner":"OManager+ORelease","outputs":["RELEASE_HOLD_DECISION","RELEASE_MANIFEST","EVIDENCE_BUNDLE","DEPLOYMENT_ROLLBACK_PLAN"],"gate":"RELEASE-14","state":"HOLD"},
+    {"stage":"S15","owner":"OOps","outputs":["SERVICE_MODEL","SLO_SLI","INCIDENT_RECORD","PROBLEM_IMPROVEMENT_BACKLOG"],"gate":"OPS-15","state":"HOLD"}
+  ],
+  "obuilder_team_directory": [
+    {"team_id":"OBT-01","name":"ARCHITECTURE_COMPONENT","boundary":"NO_PM_OR_GO_AUTHORITY"},
+    {"team_id":"OBT-02","name":"FRONTEND_WEB_UI","boundary":"IMPLEMENT_APPROVED_DESIGN_ONLY"},
+    {"team_id":"OBT-03","name":"BACKEND_API","boundary":"NO_POLICY_SELF_APPROVAL"},
+    {"team_id":"OBT-04","name":"CONTENT_CMS","boundary":"NO_CLAIM_APPROVAL"},
+    {"team_id":"OBT-05","name":"DATA_METADATA","boundary":"NO_UNAPPROVED_CUSTOMER_DATA"},
+    {"team_id":"OBT-06","name":"INTEGRATION_ADAPTER","boundary":"FAILURE_ISOLATION_REQUIRED"},
+    {"team_id":"OBT-07","name":"AI_KNOWLEDGE","boundary":"NO_AI_SELF_APPROVAL"},
+    {"team_id":"OBT-08","name":"SECURITY_IAM","boundary":"NO_LEGAL_APPROVAL"},
+    {"team_id":"OBT-09","name":"BUILD_DEVOPS","boundary":"NO_PRODUCTION_GO_AUTHORITY"},
+    {"team_id":"OBT-10","name":"DEVELOPER_QUALITY","boundary":"DOES_NOT_REPLACE_OTESTER_OR_OVIEW"}
+  ],
+  "obuilder_intake_rule": "ONLY_OPROJECTLEADER_BUILD_REQUEST_PACKAGE_ACCEPTED",
+  "required_assurance_chain": ["OTester", "OView", "OAudit", "OAsset"],
+  "promotion_rules": [
+    "NO_STAGE_PASS_WITHOUT_REQUIRED_OUTPUTS",
+    "NO_PASS_WITHOUT_ORACLE_AND_TEST_EVIDENCE",
+    "NO_PASS_WITHOUT_OVIEW_INDEPENDENT_VERIFICATION",
+    "NO_APPROVAL_WITHOUT_OAUDIT_EVIDENCE",
+    "NO_REUSE_BASELINE_WITHOUT_OASSET_IDENTITY_AND_PROVENANCE",
+    "NO_RELEASE_WITHOUT_OVIEW_OAUDIT_OASSET_BUNDLE"
+  ]
+}
