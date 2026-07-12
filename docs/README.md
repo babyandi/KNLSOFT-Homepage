@@ -19,7 +19,7 @@ Machine-readable control:
 - `scripts/validate_knlsoft_oruda_project.py`
 - `scripts/test_knlsoft_oruda_project_mutations.py`
 
-Current true hard gate: `OBP-ENTRY`. `OBusinessPlanning`, `OBusinessAdmin`, `ORFP`, `OAcceptance`, `OProjectManager`, `OProjectLeader`, and the required `OVisual` binding were not found in the current ORUDA main program methodology matrix. The required delegation spine is `OBusinessPlanning → OBusinessAdmin → Formal GO/HOLD → OProjectManager → OProjectLeader → OBuilder internal teams`. No downstream design/build gate may pass until these dependencies are registered and validated.
+Current true hard gate: `OBP-ENTRY`. `OBusinessPlanning`, `OBusinessAdmin`, `ORFP`, `OAcceptance`, `OProjectManager`, `OProjectLeader`, and the required `OVisual` binding were not found in the current ORUDA main program methodology matrix. The required delegation spine is `OBusinessPlanning → OBusinessAdmin → OManager → OProjectManager → OProjectLeader → OBuilder internal teams`. No downstream design/build gate may pass until these dependencies are registered and validated.
 
 ## ORUDA intake inputs
 
