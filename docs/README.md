@@ -2,7 +2,26 @@
 
 ## Active baseline
 
-The active working baseline is `v0.2 Candidate`, which treats the website as a digital service and controls work through W00–W14 and the Content & Evidence Gate.
+The active working baseline is now `ORUDA-Native Execution Baseline v1.0 Candidate`. The previous v0.2 digital-service documents are retained as `ORUDA_INTAKE_INPUT_CANDIDATE` and must be reprocessed by the ORUDA program chain before they can become approved outputs.
+
+| No. | ORUDA control document | Purpose | State |
+|---:|---|---|---|
+| 27 | ORUDA-Native Execution Baseline | project identity, baseline, entry program, boundary | ACTIVE CONTROL CANDIDATE |
+| 28 | Program · Artifact · Handoff Map | end-to-end ownership and output transfer | ACTIVE CONTROL CANDIDATE |
+| 29 | Gate · State Ledger | fail-closed stage status and triggers | ACTIVE |
+| 30 | Delegation Spine · OBuilder Team Routing | OProjectManager/OProjectLeader delegation and development teams | ACTIVE CONTROL CANDIDATE |
+
+Machine-readable control:
+
+- `oruda/project/KNLSOFT_WEBSITE_PROJECT.v1.0.0.json`
+- `oruda/project/KNLSOFT_WEBSITE_ARTIFACT_MAP.v1.0.0.json`
+- `oruda/project/KNLSOFT_WEBSITE_GATE_LEDGER.v1.0.0.json`
+- `scripts/validate_knlsoft_oruda_project.py`
+- `scripts/test_knlsoft_oruda_project_mutations.py`
+
+Current true hard gate: `OBP-ENTRY`. `OBusinessPlanning`, `OBusinessAdmin`, `ORFP`, `OAcceptance`, `OProjectManager`, `OProjectLeader`, and the required `OVisual` binding were not found in the current ORUDA main program methodology matrix. The required delegation spine is `OBusinessPlanning → OBusinessAdmin → Formal GO/HOLD → OProjectManager → OProjectLeader → OBuilder internal teams`. No downstream design/build gate may pass until these dependencies are registered and validated.
+
+## ORUDA intake inputs
 
 | No. | Document | Purpose | State |
 |---:|---|---|---|
