@@ -52,3 +52,10 @@ Re-evaluate WG-00 when the P0 decisions, official sources, upstream asset approv
 ## RCA
 
 Previous work began from visual output because there was no enforced W00 intake package. Prevention is a fail-closed W00 validator that checks evidence status, missing-source handling, scenario coverage, delegation, authority activation and downstream HOLD flags.
+
+### RCA — first W00 CI failure
+
+- **Failure:** the legacy project validator accepted only the former project and gate state labels, so the more specific W00 HOLD state was classified as fail-open.
+- **Cause:** safe control states were encoded as one frozen label instead of being versioned with the lifecycle transition.
+- **Correction:** the validator now requires the exact W00 preparation/HOLD state, verifies both `WG-00=HOLD` and `OBP-ENTRY=BLOCK`, and keeps downstream promotion false.
+- **Prevention:** the mutation harness now opens each gate independently and must reject both mutations.
