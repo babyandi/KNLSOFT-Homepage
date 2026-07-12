@@ -15,46 +15,65 @@
   "entry_program": {
     "program_name": "OBusinessPlanning",
     "required": true,
-    "repository_binding_state": "NOT_FOUND",
+    "repository_binding_state": "CANDIDATE_IN_ORUDA_PR_25_NOT_MAIN",
     "gate": "OBP-ENTRY",
     "decision": "BLOCK",
-    "bypass_allowed": false
+    "bypass_allowed": false,
+    "candidate_binding": {
+      "pull_request": "https://github.com/babyandi/ORUDA/pull/25",
+      "commit_sha": "ef87184b21b48f0fd994c9f99b63a6422dff8fca",
+      "ci": "SUCCESS"
+    }
   },
   "missing_dependencies": [
     {
       "name": "OBusinessPlanning",
-      "type": "PROGRAM",
-      "severity": "TRUE_HARD_GATE"
+      "type": "ROLE_BINDING_AND_RUNTIME",
+      "severity": "TRUE_HARD_GATE",
+      "binding_state": "CANDIDATE_PR_25",
+      "runtime_state": "NOT_EVIDENCED"
     },
     {
       "name": "OBusinessAdmin",
-      "type": "PROGRAM",
-      "severity": "DEPENDENCY_BLOCK"
+      "type": "ROLE_BINDING_AND_RUNTIME",
+      "severity": "DEPENDENCY_BLOCK",
+      "binding_state": "CANDIDATE_PR_25",
+      "runtime_state": "NOT_EVIDENCED"
     },
     {
       "name": "ORFP",
-      "type": "PROGRAM",
-      "severity": "DEPENDENCY_BLOCK"
+      "type": "ROLE_BINDING_AND_RUNTIME",
+      "severity": "DEPENDENCY_BLOCK",
+      "binding_state": "CANDIDATE_PR_25",
+      "runtime_state": "NOT_EVIDENCED"
     },
     {
       "name": "OAcceptance",
-      "type": "PROGRAM_OR_ROLE",
-      "severity": "ASSURANCE_DEPENDENCY_BLOCK"
+      "type": "ROLE_BINDING_AND_RUNTIME",
+      "severity": "ASSURANCE_DEPENDENCY_BLOCK",
+      "binding_state": "CANDIDATE_PR_25",
+      "runtime_state": "NOT_EVIDENCED"
     },
     {
       "name": "OProjectManager",
-      "type": "PROGRAM_OR_ROLE",
-      "severity": "EXECUTION_ROLE_BLOCK"
+      "type": "ROLE_BINDING_AND_RUNTIME",
+      "severity": "EXECUTION_ROLE_BLOCK",
+      "binding_state": "CANDIDATE_PR_25",
+      "runtime_state": "NOT_EVIDENCED"
     },
     {
       "name": "OProjectLeader",
-      "type": "PROGRAM_OR_ROLE",
-      "severity": "EXECUTION_ROLE_BLOCK"
+      "type": "ROLE_BINDING_AND_RUNTIME",
+      "severity": "EXECUTION_ROLE_BLOCK",
+      "binding_state": "CANDIDATE_PR_25",
+      "runtime_state": "NOT_EVIDENCED"
     },
     {
       "name": "OVisual",
       "type": "PROGRAM_OR_COMPONENT",
-      "severity": "DESIGN_DEPENDENCY_BLOCK"
+      "severity": "DESIGN_DEPENDENCY_BLOCK",
+      "binding_state": "NOT_FOUND",
+      "runtime_state": "NOT_EVIDENCED"
     }
   ],
   "delegation_spine": [
@@ -128,8 +147,8 @@
     "commercial_go": false,
     "official_delivery": false
   },
-  "next_action": "COMPLETE_W00_P0_DECISIONS_AND_OFFICIAL_SOURCE_BINDINGS",
-  "resume_trigger": "OBP_CONTRACT_UPSTREAM_ASSET_APPROVAL_OFFICIAL_SOURCES_AND_AUTHORITY_BINDINGS",
+  "next_action": "REVIEW_ORUDA_PR_25_AND_IMPLEMENT_OR_CONNECT_OBUSINESSPLANNING_RUNTIME",
+  "resume_trigger": "ORUDA_PR_25_MAIN_APPLIED_AND_OBUSINESSPLANNING_RUNTIME_CONTRACT_EXECUTION_EVIDENCE_PASS",
   "W00": {
     "status": "PREPARATION_IN_PROGRESS_HOLD",
     "artifact_root": "oruda/website/W00",
