@@ -30,12 +30,13 @@ def validate_documents(d):
     require(required.issubset({x.get("name") for x in s.get("missing_official_sources",[])}),"official source gaps incomplete")
     require(s.get("conflict_rule")=="HIGHER_PRIORITY_SOURCE_WINS_AND_CONFLICT_REQUIRES_DECISION_LOG","source conflict rule missing")
     require(len(b.get("items",[]))>=10,"decision backlog incomplete")
-    require(all(x.get("state")=="OPEN" for x in b.get("items",[])),"unapproved decisions must remain OPEN")
+    require(next(x for x in b.get("items",[]) if x.get("decision_id")=="D-W00-004").get("state")=="APPROVED_BY_USER_INSTRUCTION","authority decision not approved")
+    require(all(x.get("state")=="OPEN" for x in b.get("items",[]) if x.get("decision_id")!="D-W00-004"),"other decisions must remain OPEN")
     require(b.get("question_policy")=="ASK_ONLY_WHEN_A_DECISION_BECOMES_THE_NEXT_TRUE_HARD_GATE","question policy invalid")
     classes={x.get("class") for x in sc.get("scenarios",[])}
     require(classes=={"NORMAL","EXCEPTION","RECOVERY"},"normal exception recovery coverage incomplete")
     require(r.get("delegation_spine")==["OBusinessPlanning","OBusinessAdmin","OManager","OProjectManager","OProjectLeader","OBuilder"],"delegation spine invalid")
-    require(r.get("actual_role_instances")==[],"actual role instances must remain empty")
+    require({x.get("role") for x in r.get("actual_role_instances",[])}=={"HUMAN_DECISION_OWNER","OManager"},"control role instances invalid")
     auth={x.get("role"):x for x in r.get("W00_authority",[])}
     require(auth.get("OProjectManager",{}).get("activation")=="NOT_ALLOWED_BEFORE_W00_EXIT","OProjectManager activated too early")
     require(auth.get("OBuilder",{}).get("activation")=="NOT_ALLOWED_BEFORE_APPROVED_BUILD_REQUEST","OBuilder activated too early")
