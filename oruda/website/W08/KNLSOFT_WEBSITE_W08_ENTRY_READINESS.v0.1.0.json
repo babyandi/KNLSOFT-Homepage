@@ -1,0 +1,34 @@
+{
+  "artifact_id": "KNLSOFT-WEBSITE-W08-ENTRY-READINESS",
+  "version": "0.1.0",
+  "stage": "W08",
+  "status": "ENTRY_PREPARATION_HOLD",
+  "authority_binding": "KNLSOFT-WEBSITE-PROJECT-AUTHORITY-BINDING",
+  "entry_gate": {
+    "gate": "WG-08-WIREFRAME-ENTRY",
+    "result": "HOLD",
+    "passed_dependencies": [],
+    "blocked_dependencies": [
+      "WG-00_THROUGH_WG-07_NOT_FORMALLY_GRANTED",
+      "OFFICIAL_ATOPS_SPEC_MISSING",
+      "OFFICIAL_SPACEMON_SPEC_MISSING",
+      "OFFICIAL_BRAND_ASSETS_MISSING",
+      "VERIFIED_PRODUCT_CLAIM_COUNT_ZERO"
+    ]
+  },
+  "preparation_allowed": [
+    "page responsibility candidate",
+    "interaction contract",
+    "responsive behavior contract",
+    "official source request manifest"
+  ],
+  "forbidden": [
+    "wireframe candidate",
+    "visual layout",
+    "component styling",
+    "implementation"
+  ],
+  "wireframe_allowed": false,
+  "wireframe_candidate": null,
+  "visual_design_allowed": false
+}
