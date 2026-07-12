@@ -147,5 +147,35 @@
     "artifact_root": "oruda/website/W02",
     "exit_gate": "WG-02-USERS-DEFINED",
     "exit_result": "HOLD"
+  },
+  "W03": {
+    "status": "CANDIDATE_PREPARATION_HOLD",
+    "artifact_root": "oruda/website/W03",
+    "exit_gate": "WG-03",
+    "exit_result": "HOLD"
+  },
+  "W04": {
+    "status": "CANDIDATE_PREPARATION_HOLD",
+    "artifact_root": "oruda/website/W04",
+    "exit_gate": "WG-04",
+    "exit_result": "HOLD"
+  },
+  "W05": {
+    "status": "CANDIDATE_PREPARATION_HOLD",
+    "artifact_root": "oruda/website/W05",
+    "exit_gate": "WG-05",
+    "exit_result": "HOLD"
+  },
+  "W06": {
+    "status": "CANDIDATE_PREPARATION_HOLD",
+    "artifact_root": "oruda/website/W06",
+    "exit_gate": "WG-06",
+    "exit_result": "HOLD"
+  },
+  "W07": {
+    "status": "CANDIDATE_PREPARATION_HOLD",
+    "artifact_root": "oruda/website/W07",
+    "exit_gate": "WG-07",
+    "exit_result": "HOLD"
   }
 }
