@@ -9,7 +9,7 @@ def main():
     if d.get("state")!="REBASELINE_ANALYZED_HOLD": errors.append("STATE_INVALID")
     old=d.get("legacy_draft",{})
     if old.get("mergeable") is not False or old.get("disposition")!="CONFLICT_HOLD_NO_FURTHER_WRITES": errors.append("STALE_PR_FAIL_OPEN")
-    if old.get("changed_file_count")!=92 or old.get("behind_by")!=1: errors.append("COMPARE_EVIDENCE_DRIFT")
+    if old.get("changed_file_count")!=89 or old.get("behind_by")!=1: errors.append("COMPARE_EVIDENCE_DRIFT")
     if len(d.get("upstream_dependencies",[]))<4: errors.append("DEPENDENCY_COVERAGE_LOW")
     if len(d.get("reconciliation_classes",[]))!=5: errors.append("RECONCILIATION_CLASS_INVALID")
     if len(d.get("artifact_work_order",[]))!=8: errors.append("WORK_ORDER_INVALID")
