@@ -6,6 +6,9 @@ on:
       - "oruda/project/**"
       - "scripts/validate_knlsoft_oruda_project.py"
       - "scripts/test_knlsoft_oruda_project_mutations.py"
+      - "oruda/inheritance/**"
+      - "scripts/validate_knlsoft_role_inheritance.py"
+      - "scripts/test_knlsoft_role_inheritance_mutations.py"
       - ".github/workflows/knlsoft-oruda-project.yml"
   workflow_dispatch:
 
@@ -25,8 +28,13 @@ jobs:
           python -m json.tool oruda/project/KNLSOFT_WEBSITE_PROJECT.v1.0.0.json >/dev/null
           python -m json.tool oruda/project/KNLSOFT_WEBSITE_ARTIFACT_MAP.v1.0.0.json >/dev/null
           python -m json.tool oruda/project/KNLSOFT_WEBSITE_GATE_LEDGER.v1.0.0.json >/dev/null
+          python -m json.tool oruda/inheritance/KNLSOFT_HOMEPAGE_OBUILDER_ROLE_BINDING.v1.0.0.json >/dev/null
       - name: Validate ORUDA project control
         run: python scripts/validate_knlsoft_oruda_project.py
       - name: Run fail-open mutation harness
         run: python scripts/test_knlsoft_oruda_project_mutations.py
+      - name: Validate ORUDA role inheritance
+        run: python scripts/validate_knlsoft_role_inheritance.py
+      - name: Run role-inheritance mutation harness
+        run: python scripts/test_knlsoft_role_inheritance_mutations.py
 
