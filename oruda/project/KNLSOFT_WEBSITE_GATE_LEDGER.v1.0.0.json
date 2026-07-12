@@ -25,6 +25,41 @@
       ]
     },
     {
+      "gate": "W01-PREP",
+      "result": "PASS_CONTROL_CANDIDATE",
+      "evidence": [
+        "oruda/website/W01/KNLSOFT_WEBSITE_W01_PURPOSE_OUTCOME.v0.1.0.json",
+        "oruda/website/W01/KNLSOFT_WEBSITE_W01_MEASURE_REGISTRY.v0.1.0.json"
+      ]
+    },
+    {
+      "gate": "WG-01",
+      "result": "HOLD",
+      "evidence": [
+        "WG-00_NOT_GRANTED",
+        "PRODUCT_BOUNDARIES_UNAPPROVED",
+        "PRIMARY_AUDIENCE_PRIORITY_UNAPPROVED",
+        "NUMERIC_TARGETS_MISSING"
+      ]
+    },
+    {
+      "gate": "W02-PREP",
+      "result": "PASS_CONTROL_CANDIDATE",
+      "evidence": [
+        "oruda/website/W02/KNLSOFT_WEBSITE_W02_USER_ROLE_CONTEXT.v0.1.0.json",
+        "oruda/website/W02/KNLSOFT_WEBSITE_W02_BUYING_DECISION_FLOW.v0.1.0.json"
+      ]
+    },
+    {
+      "gate": "WG-02",
+      "result": "HOLD",
+      "evidence": [
+        "WG-01_NOT_GRANTED",
+        "USER_RESEARCH_MISSING",
+        "SUPPORT_AND_PARTNER_SCOPE_UNDECIDED"
+      ]
+    },
+    {
       "gate": "REG-00",
       "result": "PASS_CONTROL_CANDIDATE",
       "evidence": [
