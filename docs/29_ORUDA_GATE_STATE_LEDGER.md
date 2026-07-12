@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|
 | REG-00 | Project identity, ORUDA baseline, scope pinned | Project JSON + validator | PASS CONTROL CANDIDATE | OManager | Registry read-back |
 | METHOD-00 | ORUDA program methodology baseline exists | ORUDA main `89b1b8a...` | PASS CONTROL CANDIDATE | ORUDA Core | Upstream baseline change |
-| OBP-ENTRY | OBusinessPlanning program/profile/contract available | Repository search and matrix | BLOCK | ORUDA Program Gap | Program binding + validator PASS |
+| OBP-ENTRY | OBusinessPlanning role/method binding and executable runtime available | ORUDA PR #25 CI SUCCESS; runtime evidence none | BLOCK | ORUDA Runtime Gap | PR #25 main 적용 + Runtime Contract/Execution/Evidence PASS |
 | DOC-INTAKE | All inputs have source/provenance/status | docs/13~26 + PS/CR registries | PARTIAL | ODocument | Source owner and originals |
 | BUSINESS-01 | Mission/outcome/scope approved by OBP | none | NOT EXECUTED | OBusinessPlanning | OBP-ENTRY PASS |
 | ADMIN-RFP-02 | Business governance, RFP/Requirement, Acceptance baseline | none | BLOCKED BY OBP | OBusinessAdmin/ORFP/OAcceptance | Bindings + BUSINESS-01 |
@@ -26,7 +26,7 @@
 
 ## 2. True Hard Gate
 
-`OBP-ENTRY = BLOCK`가 현재 첫 번째 True Hard Gate다. 따라서 ORUDA 실행은 여기서 멈춘다. 다만 다음 비의존 작업은 계속할 수 있다.
+`OBP-ENTRY = BLOCK`가 현재 첫 번째 True Hard Gate다. Role Binding Candidate는 ORUDA PR #25에서 준비됐지만, main 적용과 실행 가능한 OBusinessPlanning Runtime 증거가 없으므로 실제 ORUDA 실행은 여기서 멈춘다. 다만 다음 비의존 작업은 계속할 수 있다.
 
 - 기존 자료의 Source/Provenance 상태 정리.
 - ORUDA Project/Artifact/Gate machine-readable registry 작성.
