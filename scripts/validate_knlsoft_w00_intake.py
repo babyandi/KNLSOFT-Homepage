@@ -41,7 +41,9 @@ def validate_documents(d):
     require(auth.get("OBuilder",{}).get("activation")=="NOT_ALLOWED_BEFORE_APPROVED_BUILD_REQUEST","OBuilder activated too early")
     stages=bind.get("stage_adoption",{})
     require(stages.get("W00")=="PREPARATION_IN_PROGRESS_HOLD","binding W00 state invalid")
-    require(all(stages.get(f"W{x:02d}")=="NOT_ASSESSED" for x in range(1,15)),"downstream stages must remain NOT_ASSESSED")
+    require(stages.get("W01")=="CANDIDATE_PREPARATION_HOLD","W01 may only be candidate preparation")
+    require(stages.get("W02")=="CANDIDATE_PREPARATION_HOLD","W02 may only be candidate preparation")
+    require(all(stages.get(f"W{x:02d}")=="NOT_ASSESSED" for x in range(3,15)),"W03-W14 must remain NOT_ASSESSED")
     ex=i.get("execution_boundary",{})
     for flag in ["W01_completed","wireframe_allowed","visual_design_allowed","implementation_allowed","production_go","commercial_go","final_lock"]:
         require(ex.get(flag) is False,f"{flag} must remain false")
