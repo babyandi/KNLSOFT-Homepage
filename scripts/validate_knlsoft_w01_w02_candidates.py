@@ -32,7 +32,8 @@ def validate_documents(d):
  req(stages.get("W00")=="PREPARATION_IN_PROGRESS_HOLD","W00 binding state invalid")
  req(stages.get("W01")=="CANDIDATE_PREPARATION_HOLD","W01 binding state invalid")
  req(stages.get("W02")=="CANDIDATE_PREPARATION_HOLD","W02 binding state invalid")
- req(all(stages.get(f"W{i:02d}")=="NOT_ASSESSED" for i in range(3,15)),"W03-W14 must remain not assessed")
+ req(all(stages.get(f"W{i:02d}")=="CANDIDATE_PREPARATION_HOLD" for i in range(3,8)),"W03-W07 candidate states invalid")
+ req(all(stages.get(f"W{i:02d}")=="NOT_ASSESSED" for i in range(8,15)),"W08-W14 must remain not assessed")
  for flag in ["W01_completed","W02_completed","wireframe_allowed","visual_design_allowed","implementation_allowed"]:
   req(p.get("execution_boundary",{}).get(flag) is False,f"{flag} must remain false")
  return e
