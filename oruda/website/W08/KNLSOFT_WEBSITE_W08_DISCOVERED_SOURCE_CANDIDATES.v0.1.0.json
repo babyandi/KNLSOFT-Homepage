@@ -1,0 +1,87 @@
+{
+  "register_id": "KNLSOFT-WEBSITE-W08-DISCOVERED-SOURCE-CANDIDATES",
+  "version": "0.1.0",
+  "status": "DISCOVERED_NOT_OFFICIAL",
+  "candidates": [
+    {
+      "id": "LIB-01",
+      "name": "aTops_AI_Extension_Product_Presentation.pptx",
+      "library_file_id": "libfile_52298d5370f88191aa47741d0c77290c",
+      "origin": "MODEL_GENERATED",
+      "content_candidate": [
+        "aTops AI Extension",
+        "SQL lifecycle quality management",
+        "AI analysis and optimization"
+      ],
+      "classification": "CONCEPT_SOURCE_REQUIRES_PRODUCT_OWNER_APPROVAL"
+    },
+    {
+      "id": "LIB-02",
+      "name": "oreport_golden_master_reuse_100pct_full.pptx",
+      "library_file_id": "libfile_f9f95003c0a08191b2bded55e4fcc85f",
+      "origin": "MODEL_GENERATED",
+      "content_candidate": [
+        "aTops EE",
+        "SQL quality management platform"
+      ],
+      "classification": "LEGACY_MARKETING_CANDIDATE_REQUIRES_PRODUCT_OWNER_APPROVAL"
+    },
+    {
+      "id": "LIB-03",
+      "name": "부산·경남은행_품질진단 시스템 도입 구축_제안서_탑에스엔아이.pptx",
+      "library_file_id": "libfile_e7f45a8c153081919bebf3cae2c570b9",
+      "origin": "USER_UPLOADED",
+      "content_candidate": [
+        "KNLSOFT company history",
+        "aTops and SPACEMON history",
+        "customer references"
+      ],
+      "classification": "PRIMARY_DOCUMENT_CANDIDATE_REQUIRES_PUBLICATION_PERMISSION_AND_CURRENTNESS_CHECK"
+    },
+    {
+      "id": "LIB-04",
+      "name": "조찬_미팅_주간보고_v1.0_20260707_가독성개선본.pdf",
+      "library_file_id": "libfile_4d93227d248c8191a129a4c96a1a61d9",
+      "origin": "MODEL_GENERATED",
+      "content_candidate": [
+        "aTops naming decision",
+        "current sales and action-plan context"
+      ],
+      "classification": "INTERNAL_DECISION_TRACE_NOT_PUBLIC_CONTENT"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "CONFLICT-01",
+      "subject": "aTops identity",
+      "observed": [
+        "SQL quality management platform",
+        "AI tuning management",
+        "observability platform"
+      ],
+      "resolution": "PRODUCT_OWNER_APPROVED_CURRENT_PRODUCT_BOUNDARY_REQUIRED"
+    },
+    {
+      "id": "CONFLICT-02",
+      "subject": "SPACEMON relationship",
+      "observed": [
+        "historic product and trademark",
+        "current priority product",
+        "prior rename or replacement references"
+      ],
+      "resolution": "PRODUCT_OWNER_APPROVED_PORTFOLIO_RELATIONSHIP_REQUIRED"
+    }
+  ],
+  "official_promotion_result": "NONE",
+  "allowed_now": [
+    "extract candidate facts",
+    "build verification questions",
+    "map provenance"
+  ],
+  "forbidden": [
+    "publish externally",
+    "use customer names without permission",
+    "treat generated slides as official specification",
+    "create product wireframe from disputed identity"
+  ]
+}
